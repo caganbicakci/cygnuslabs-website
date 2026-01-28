@@ -1,5 +1,6 @@
 // Component Loader - Loads HTML components using XMLHttpRequest
 // Works with both file:// and http:// protocols
+// Optimized for GitHub Pages
 
 function loadComponent(componentName, containerId) {
     return new Promise((resolve, reject) => {
@@ -9,9 +10,13 @@ function loadComponent(componentName, containerId) {
             return;
         }
 
+        // Use relative path - works for both GitHub Pages and local development
+        // GitHub Pages serves from root, so relative paths work fine
+        const componentPath = `./components/${componentName}.html`;
+        
         const xhr = new XMLHttpRequest();
         const timestamp = new Date().getTime();
-        xhr.open('GET', `components/${componentName}.html?t=${timestamp}`, true);
+        xhr.open('GET', `${componentPath}?t=${timestamp}`, true);
         
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
@@ -19,12 +24,14 @@ function loadComponent(componentName, containerId) {
                     container.innerHTML = xhr.responseText;
                     resolve();
                 } else {
+                    console.error(`Failed to load ${componentName}: ${xhr.status} from ${componentPath}`);
                     reject(new Error(`Failed to load ${componentName}: ${xhr.status}`));
                 }
             }
         };
         
         xhr.onerror = function() {
+            console.error(`Network error loading ${componentName} from ${componentPath}`);
             reject(new Error(`Network error loading ${componentName}`));
         };
         
