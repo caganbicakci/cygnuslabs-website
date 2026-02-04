@@ -52,11 +52,6 @@ async function loadAllComponents() {
         document.dispatchEvent(event);
     } catch (error) {
         console.error('Error loading components:', error);
-        // Show error message but don't replace entire body
-        const errorDiv = document.createElement('div');
-        errorDiv.style.cssText = 'padding: 2rem; text-align: center; color: white; background: red; margin: 1rem; border-radius: 0.5rem;';
-        errorDiv.innerHTML = '<h2>Error Loading Components</h2><p>Please use a web server to run this application.</p><p>Run: python3 -m http.server 8000</p>';
-        document.body.insertBefore(errorDiv, document.body.firstChild);
     }
 }
 
