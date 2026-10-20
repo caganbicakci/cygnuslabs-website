@@ -1,4 +1,8 @@
-<!-- Our apps. Store links and texts follow the App Store listings; each app links to its privacy policy. -->
+<!--
+  Our apps. Store links and texts follow the App Store listings; each app links to its privacy policy.
+  Banners: 16:9 JPGs (1600x900) in assets/images/apps/<app>-banner.jpg, made from the apps' store assets.
+  A missing banner hides itself (onerror) and the card's gradient shows instead.
+-->
 <section class="py-20 sm:py-28 bg-background-dark border-t border-slate-800" id="apps">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12 sm:mb-16">
@@ -6,58 +10,73 @@
             <p class="text-slate-400 text-base sm:text-lg leading-relaxed">Simple, private apps for everyday life. No ads, no tracking: your data stays on your device.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <!-- Miluw Kids -->
-            <article class="flex flex-col rounded-3xl border border-slate-700 bg-surface-dark p-6 sm:p-8 hover:border-primary/50 transition-colors">
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="assets/images/apps/miluw-kids.png" alt="Miluw Kids app icon" class="w-16 h-16 rounded-2xl shadow-lg" loading="lazy">
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Miluw Kids</h3>
-                        <p class="text-xs font-semibold uppercase tracking-wider text-primary">Education · Ages 3–6</p>
-                    </div>
-                </div>
-                <p class="text-slate-400 leading-relaxed mb-6 flex-1">Playful learning for preschoolers. Trace letters and numbers, discover colors, shapes, animals and vehicles, and practice with mini games and natural voice-overs.</p>
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://apps.apple.com/app/id6757478012" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-background-dark text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors">
-                        <span class="material-symbols-outlined text-lg">ios</span>App Store
+            <article class="group flex flex-col rounded-3xl border border-slate-700 bg-surface-dark overflow-hidden hover:border-primary/50 transition-colors">
+                <a href="https://apps.apple.com/app/id6757478012" target="_blank" rel="noopener noreferrer" class="block aspect-video overflow-hidden bg-gradient-to-br from-sky-300 to-emerald-300" aria-label="Miluw Kids on the App Store">
+                    <img src="assets/images/apps/miluw-kids-banner.jpg" alt="Miluw Kids: learning games for preschoolers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.remove()">
+                </a>
+                <div class="flex flex-col flex-1 p-6 sm:p-8">
+                    <a href="https://apps.apple.com/app/id6757478012" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-5">
+                        <img src="assets/images/apps/miluw-kids.png" alt="" class="w-14 h-14 rounded-2xl shadow-lg" loading="lazy">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Miluw Kids</h3>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-primary">Education · Ages 3–6</p>
+                        </div>
                     </a>
-                    <a href="miluw-kids/privacy/" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                    <p class="text-slate-400 leading-relaxed mb-6 flex-1">Playful learning for preschoolers. Trace letters and numbers, discover colors, shapes, animals and vehicles, and practice with mini games and natural voice-overs.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://apps.apple.com/app/id6757478012" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-background-dark text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors">
+                            <span class="material-symbols-outlined text-lg">ios</span>App Store
+                        </a>
+                        <a href="miluw-kids/privacy/" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                    </div>
                 </div>
             </article>
 
             <!-- Budget Flux -->
-            <article class="flex flex-col rounded-3xl border border-slate-700 bg-surface-dark p-6 sm:p-8 hover:border-primary/50 transition-colors">
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="assets/images/apps/budget-flux.png" alt="Budget Flux app icon" class="w-16 h-16 rounded-2xl shadow-lg" loading="lazy">
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Budget Flux</h3>
-                        <p class="text-xs font-semibold uppercase tracking-wider text-primary">Finance</p>
-                    </div>
-                </div>
-                <p class="text-slate-400 leading-relaxed mb-6 flex-1">Track income, expenses, budgets and investments in one place, with up-to-date exchange rates and market prices.</p>
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://apps.apple.com/app/id6760832535" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-background-dark text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors">
-                        <span class="material-symbols-outlined text-lg">ios</span>App Store
+            <article class="group flex flex-col rounded-3xl border border-slate-700 bg-surface-dark overflow-hidden hover:border-primary/50 transition-colors">
+                <a href="https://apps.apple.com/app/id6760832535" target="_blank" rel="noopener noreferrer" class="relative flex items-center justify-center aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-teal-950 to-emerald-900" aria-label="Budget Flux on the App Store">
+                    <!-- Shown until a banner is added -->
+                    <img src="assets/images/apps/budget-flux.png" alt="" class="w-24 h-24 rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="assets/images/apps/budget-flux-banner.jpg" alt="Budget Flux: expense and investment tracker" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.remove()">
+                </a>
+                <div class="flex flex-col flex-1 p-6 sm:p-8">
+                    <a href="https://apps.apple.com/app/id6760832535" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 mb-5">
+                        <img src="assets/images/apps/budget-flux.png" alt="" class="w-14 h-14 rounded-2xl shadow-lg" loading="lazy">
+                        <div>
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Budget Flux</h3>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-primary">Finance</p>
+                        </div>
                     </a>
-                    <a href="privacy.html" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                    <p class="text-slate-400 leading-relaxed mb-6 flex-1">Track income, expenses, budgets and investments in one place, with up-to-date exchange rates and market prices.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://apps.apple.com/app/id6760832535" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-background-dark text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors">
+                            <span class="material-symbols-outlined text-lg">ios</span>App Store
+                        </a>
+                        <a href="privacy.html?lang=en#budget-flux-en" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                    </div>
                 </div>
             </article>
 
-            <!-- Pery (not on the App Store yet) -->
-            <article class="flex flex-col rounded-3xl border border-slate-700 bg-surface-dark p-6 sm:p-8 hover:border-primary/50 transition-colors">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 rounded-2xl shadow-lg bg-gradient-to-br from-rose-400 to-fuchsia-500 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-3xl">calendar_month</span>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">Pery</h3>
-                        <p class="text-xs font-semibold uppercase tracking-wider text-primary">Health</p>
-                    </div>
+            <!-- Pery (not on the App Store yet: no store links) -->
+            <article class="group flex flex-col rounded-3xl border border-slate-700 bg-surface-dark overflow-hidden hover:border-primary/50 transition-colors">
+                <div class="aspect-video overflow-hidden bg-gradient-to-br from-[#3a1f3d] to-[#5a2d55]">
+                    <img src="assets/images/apps/pery-banner.jpg" alt="Pery: private period and cycle tracker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.remove()">
                 </div>
-                <p class="text-slate-400 leading-relaxed mb-6 flex-1">A private period and cycle tracker. Use it without an account and everything stays on your phone.</p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 text-primary text-sm font-bold rounded-lg">Coming soon</span>
-                    <a href="pery/privacy/" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                <div class="flex flex-col flex-1 p-6 sm:p-8">
+                    <div class="flex items-center gap-4 mb-5">
+                        <img src="assets/images/apps/pery.png" alt="" class="w-14 h-14 rounded-2xl shadow-lg" loading="lazy">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Pery</h3>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-primary">Health</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-6 flex-1">A private period and cycle tracker. Use it without an account and everything stays on your phone.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 text-primary text-sm font-bold rounded-lg">Coming soon</span>
+                        <a href="pery/privacy/" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-600 text-slate-300 text-sm font-semibold rounded-lg hover:border-primary hover:text-primary transition-colors">Privacy</a>
+                    </div>
                 </div>
             </article>
         </div>
