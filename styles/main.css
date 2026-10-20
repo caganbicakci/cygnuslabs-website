@@ -5,11 +5,11 @@
  * in dark mode so it doesn't glow.
  */
 :root {
-    --bg: 247 246 243;        /* #F7F6F3 */
-    --surface: 253 253 251;   /* #FDFDFB */
+    --bg: 240 239 235;        /* #F0EFEB */
+    --surface: 250 249 247;   /* #FAF9F7 */
     --fg: 28 27 25;           /* #1C1B19 */
-    --muted: 107 105 100;     /* #6B6964 */
-    --line: 229 227 222;      /* #E5E3DE */
+    --muted: 94 92 87;        /* #5E5C57 */
+    --line: 219 217 211;      /* #DBD9D3 */
     --accent: 43 95 158;      /* #2B5F9E */
     --accent-fg: 253 253 251;
     color-scheme: light;
