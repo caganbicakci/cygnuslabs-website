@@ -31,40 +31,19 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#06b6d4",
-                        secondary: "#0891b2",
-                        "background-dark": "#0f172a",
-                        "surface-dark": "#1e293b",
-                    },
-                    fontFamily: {
-                        display: ["Plus Jakarta Sans", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                    },
-                },
-            },
-        };
-    </script>
+    <!-- Theme: Tailwind colors + light/dark mode (shared by every page) -->
+    <script src="scripts/theme.js"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="bg-background-dark text-slate-100 selection:bg-primary selection:text-white">
+<body class="bg-bg text-fg">
 
     <div id="header"></div>
 
     <main class="pt-24 sm:pt-28 pb-16 sm:pb-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-primary transition-colors text-sm mb-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-muted hover:text-fg transition-colors text-sm mb-8">
                 <span class="material-symbols-outlined text-lg">arrow_back</span>
                 <span id="back-text">Ana Sayfaya Dön</span>
             </a>
@@ -76,49 +55,49 @@
 
             <div id="content-tr" lang="tr">
             <div class="mb-8">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Pery Gizlilik Politikası</h1>
-                <p class="text-slate-400 text-sm">KVKK Aydınlatma Metni · Sürüm 1 · Yürürlük: 9 Ekim 2026</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Pery Gizlilik Politikası</h1>
+                <p class="text-muted text-sm">KVKK Aydınlatma Metni · Sürüm 1 · Yürürlük: 9 Ekim 2026</p>
             </div>
 
-            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
-                <p class="font-semibold text-white mb-2">Kısaca</p>
-                <ul class="list-disc pl-6 space-y-1 text-slate-300">
-                    <li>Hesap açmazsan kayıtların <strong class="text-slate-100">yalnızca telefonunda</strong> kalır; hiçbir sunucuya gönderilmez.</li>
-                    <li>Hesap açarsan kayıtların, cihazlar arası senkron ve yedek için Almanya'daki (Frankfurt) sunucumuzda saklanır. Bunun için senden ayrıca <strong class="text-slate-100">açık rıza</strong> isteriz.</li>
-                    <li>Verilerini <strong class="text-slate-100">satmayız</strong>, reklam için kullanmayız; uygulamada reklam ya da analitik aracı yoktur.</li>
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">Kısaca</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>Hesap açmazsan kayıtların <strong class="text-fg">yalnızca telefonunda</strong> kalır; hiçbir sunucuya gönderilmez.</li>
+                    <li>Hesap açarsan kayıtların, cihazlar arası senkron ve yedek için Almanya'daki (Frankfurt) sunucumuzda saklanır. Bunun için senden ayrıca <strong class="text-fg">açık rıza</strong> isteriz.</li>
+                    <li>Verilerini <strong class="text-fg">satmayız</strong>, reklam için kullanmayız; uygulamada reklam ya da analitik aracı yoktur.</li>
                     <li>Hesabını uygulamanın içinden istediğin an silebilirsin.</li>
                 </ul>
             </div>
 
-            <div class="space-y-10 text-slate-300 leading-relaxed">
+            <div class="space-y-10 text-fg/80 leading-relaxed">
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Veri sorumlusu</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Veri sorumlusu</h2>
                     <p>Pery, Çağan Bıçakçı tarafından CygnusLabs adıyla geliştirilen bir uygulamadır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu Çağan Bıçakçı'dır.</p>
-                    <p class="mt-2">İletişim: <a href="mailto:pery@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">pery@cygnuslabs.ai</a></p>
+                    <p class="mt-2">İletişim: <a href="mailto:pery@cygnuslabs.ai" class="text-accent hover:underline">pery@cygnuslabs.ai</a></p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. İki kullanım şekli</h2>
-                    <h3 class="font-semibold text-slate-100 mt-4 mb-1">Hesapsız kullanım (varsayılan)</h3>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. İki kullanım şekli</h2>
+                    <h3 class="font-semibold text-fg mt-4 mb-1">Hesapsız kullanım (varsayılan)</h3>
                     <p>Uygulamayı hesap açmadan kullanabilirsin. Bu durumda girdiğin hiçbir bilgi telefonundan çıkmaz; tahminler ve hesaplamalar cihazında yapılır. Bu verileri biz göremeyiz ve işlemeyiz. Uygulamayı sildiğinde ya da "Tüm Verileri Sıfırla"yı kullandığında bu veriler silinir.</p>
-                    <h3 class="font-semibold text-slate-100 mt-4 mb-1">Hesaplı kullanım (isteğe bağlı)</h3>
-                    <p>E-posta adresinle hesap açarsan, kayıtların cihazların arasında eşitlenmesi, telefonunu kaybettiğinde geri getirilebilmesi ve dilersen bir yakınınla paylaşılabilmesi için sunucumuzda saklanır. Hesap açmak <strong class="text-slate-100">18 yaşını doldurmuş</strong> kullanıcılarla sınırlıdır.</p>
+                    <h3 class="font-semibold text-fg mt-4 mb-1">Hesaplı kullanım (isteğe bağlı)</h3>
+                    <p>E-posta adresinle hesap açarsan, kayıtların cihazların arasında eşitlenmesi, telefonunu kaybettiğinde geri getirilebilmesi ve dilersen bir yakınınla paylaşılabilmesi için sunucumuzda saklanır. Hesap açmak <strong class="text-fg">18 yaşını doldurmuş</strong> kullanıcılarla sınırlıdır.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. Hangi verileri işliyoruz?</h2>
-                    <p>Aşağıdakiler yalnızca <strong class="text-slate-100">hesaplı kullanımda</strong> sunucuya gönderilir:</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. Hangi verileri işliyoruz?</h2>
+                    <p>Aşağıdakiler yalnızca <strong class="text-fg">hesaplı kullanımda</strong> sunucuya gönderilir:</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Veri</th><th class="py-2 pr-4 font-medium">Örnek</th><th class="py-2 font-medium">Neden</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Veri</th><th class="py-2 pr-4 font-medium">Örnek</th><th class="py-2 font-medium">Neden</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Kimlik ve iletişim</td><td class="py-2 pr-4">E-posta adresi</td><td class="py-2">Hesaba giriş (e-postana gelen tek kullanımlık kod)</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profil</td><td class="py-2 pr-4">Adın, doğum tarihin, boy, kilo, uygulamayı kullanma amacın</td><td class="py-2">Cihazlar arası senkron; adın paylaşım isteklerinde karşı tarafa görünür</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4"><strong class="text-slate-100">Sağlık verileri</strong> (özel nitelikli)</td><td class="py-2 pr-4">Adet başlangıç/bitiş tarihleri, döngü ve adet süresi, günlük ruh hali, belirtiler ve şiddetleri, duygular, su tüketimi, kendi eklediğin belirti/duygu adları ve açıklamaları</td><td class="py-2">Cihazlar arası senkron, yedekleme ve (açarsan) paylaşım</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Paylaşım bilgileri</td><td class="py-2 pr-4">Kiminle paylaştığın, paylaşım kapsamı, bildirim tercihleri</td><td class="py-2">Paylaşım özelliğinin çalışması</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Cihaz bildirim jetonu</td><td class="py-2 pr-4">Apple/Expo push jetonu</td><td class="py-2">Paylaşım bildirimlerini cihazına ulaştırmak</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Kimlik ve iletişim</td><td class="py-2 pr-4">E-posta adresi</td><td class="py-2">Hesaba giriş (e-postana gelen tek kullanımlık kod)</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profil</td><td class="py-2 pr-4">Adın, doğum tarihin, boy, kilo, uygulamayı kullanma amacın</td><td class="py-2">Cihazlar arası senkron; adın paylaşım isteklerinde karşı tarafa görünür</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4"><strong class="text-fg">Sağlık verileri</strong> (özel nitelikli)</td><td class="py-2 pr-4">Adet başlangıç/bitiş tarihleri, döngü ve adet süresi, günlük ruh hali, belirtiler ve şiddetleri, duygular, su tüketimi, kendi eklediğin belirti/duygu adları ve açıklamaları</td><td class="py-2">Cihazlar arası senkron, yedekleme ve (açarsan) paylaşım</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Paylaşım bilgileri</td><td class="py-2 pr-4">Kiminle paylaştığın, paylaşım kapsamı, bildirim tercihleri</td><td class="py-2">Paylaşım özelliğinin çalışması</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Cihaz bildirim jetonu</td><td class="py-2 pr-4">Apple/Expo push jetonu</td><td class="py-2">Paylaşım bildirimlerini cihazına ulaştırmak</td></tr>
                                 <tr><td class="py-2 pr-4">Teknik kayıtlar</td><td class="py-2 pr-4">IP adresi, istek zamanı</td><td class="py-2">Güvenlik ve kötüye kullanımın önlenmesi (sunucu günlükleri)</td></tr>
                             </tbody>
                         </table>
@@ -127,66 +106,66 @@
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Hukuki sebepler</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Hukuki sebepler</h2>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li><strong class="text-slate-100">Sağlık verileri:</strong> KVKK m.6 uyarınca <strong class="text-slate-100">açık rızan</strong>. Hesap açarken bu rızayı ayrıca ve açıkça isteriz; rıza vermezsen hesap açılmaz, uygulamayı hesapsız kullanmaya devam edersin.</li>
-                        <li><strong class="text-slate-100">Hesap ve iletişim bilgileri:</strong> KVKK m.5/2-c, hizmetin (sözleşmenin) ifası.</li>
-                        <li><strong class="text-slate-100">Teknik kayıtlar:</strong> KVKK m.5/2-f, güvenliği sağlamaya yönelik meşru menfaat.</li>
-                        <li><strong class="text-slate-100">Bir yakınınla paylaşım:</strong> Her paylaşımda, paylaşılacak alanları tek tek gösterip ayrı bir açık rıza alırız.</li>
+                        <li><strong class="text-fg">Sağlık verileri:</strong> KVKK m.6 uyarınca <strong class="text-fg">açık rızan</strong>. Hesap açarken bu rızayı ayrıca ve açıkça isteriz; rıza vermezsen hesap açılmaz, uygulamayı hesapsız kullanmaya devam edersin.</li>
+                        <li><strong class="text-fg">Hesap ve iletişim bilgileri:</strong> KVKK m.5/2-c, hizmetin (sözleşmenin) ifası.</li>
+                        <li><strong class="text-fg">Teknik kayıtlar:</strong> KVKK m.5/2-f, güvenliği sağlamaya yönelik meşru menfaat.</li>
+                        <li><strong class="text-fg">Bir yakınınla paylaşım:</strong> Her paylaşımda, paylaşılacak alanları tek tek gösterip ayrı bir açık rıza alırız.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Verilerin saklandığı yer ve aktarıldığı taraflar</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Verilerin saklandığı yer ve aktarıldığı taraflar</h2>
                     <p>Verilerini satmayız ve pazarlama amacıyla kimseyle paylaşmayız. Hizmeti sunabilmek için aşağıdaki hizmet sağlayıcıları kullanırız:</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Sağlayıcı</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 pr-4 font-medium">Konum</th><th class="py-2 font-medium">Hangi veri</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Sağlayıcı</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 pr-4 font-medium">Konum</th><th class="py-2 font-medium">Hangi veri</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Oracle Cloud</td><td class="py-2 pr-4">Sunucu barındırma</td><td class="py-2 pr-4">Almanya (Frankfurt)</td><td class="py-2">Hesaplı kullanımdaki tüm veriler</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Cloudflare R2</td><td class="py-2 pr-4">Şifreli yedek</td><td class="py-2 pr-4">Avrupa Birliği</td><td class="py-2">Sunucu veritabanının yedeği</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Google (Gmail)</td><td class="py-2 pr-4">Giriş kodu e-postası gönderimi</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">E-posta adresin ve giriş kodu</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Oracle Cloud</td><td class="py-2 pr-4">Sunucu barındırma</td><td class="py-2 pr-4">Almanya (Frankfurt)</td><td class="py-2">Hesaplı kullanımdaki tüm veriler</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Cloudflare R2</td><td class="py-2 pr-4">Şifreli yedek</td><td class="py-2 pr-4">Avrupa Birliği</td><td class="py-2">Sunucu veritabanının yedeği</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Google (Gmail)</td><td class="py-2 pr-4">Giriş kodu e-postası gönderimi</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">E-posta adresin ve giriş kodu</td></tr>
                                 <tr><td class="py-2 pr-4">Expo ve Apple</td><td class="py-2 pr-4">Bildirim iletimi</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">Bildirim jetonu ve bildirim metni</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-3"><strong class="text-slate-100">Yurt dışına aktarım hakkında:</strong> Sunucu ve yedekler Avrupa Birliği'ndedir. Giriş kodu e-postaları ve bildirimler ise ABD'de de hizmet veren sağlayıcılar üzerinden iletilir. Paylaşım bildirimleri (ör. "Adet başladı") bu yolla bir sağlık bilgisi taşıyabilir; bu bildirimleri istediğin an kapatabilirsin. Bu aktarımlar için de hesap açarken rızanı isteriz.</p>
+                    <p class="mt-3"><strong class="text-fg">Yurt dışına aktarım hakkında:</strong> Sunucu ve yedekler Avrupa Birliği'ndedir. Giriş kodu e-postaları ve bildirimler ise ABD'de de hizmet veren sağlayıcılar üzerinden iletilir. Paylaşım bildirimleri (ör. "Adet başladı") bu yolla bir sağlık bilgisi taşıyabilir; bu bildirimleri istediğin an kapatabilirsin. Bu aktarımlar için de hesap açarken rızanı isteriz.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. Saklama süresi</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. Saklama süresi</h2>
                     <ul class="list-disc pl-6 space-y-1">
                         <li>Hesap verilerin, hesabını silene kadar saklanır.</li>
-                        <li>Hesabını sildiğinde sunucudaki verilerin ve paylaşımların hemen silinir. Yedekler kendiliğinden döndüğü için silinen veriler <strong class="text-slate-100">en geç 30 gün</strong> içinde yedeklerden de kalkar.</li>
+                        <li>Hesabını sildiğinde sunucudaki verilerin ve paylaşımların hemen silinir. Yedekler kendiliğinden döndüğü için silinen veriler <strong class="text-fg">en geç 30 gün</strong> içinde yedeklerden de kalkar.</li>
                         <li>Sunucu günlükleri (IP adresi) kısa süreli tutulur ve kendiliğinden silinir.</li>
                         <li>Bildirim jetonu, oturumu kapattığında ya da hesabını sildiğinde silinir.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Güvenlik</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Güvenlik</h2>
                     <p>Cihazınla sunucu arasındaki tüm bağlantılar şifrelidir (TLS). Her kullanıcı yalnızca kendi kayıtlarına erişebilir; paylaşımda karşı taraf yalnızca senin seçtiğin ve onayladığın alanları görür ve günlük kayıtlarının ham hâlini hiçbir zaman göremez.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Hakların (KVKK m.11)</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Hakların (KVKK m.11)</h2>
                     <p>Verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, aktarıldığı tarafları öğrenme, itiraz etme ve zararın giderilmesini talep etme hakların vardır.</p>
                     <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li><strong class="text-slate-100">Silme ve rızayı geri alma:</strong> Uygulamada Ayarlar → Hesap → Hesabı Sil ile hesabını ve sunucudaki tüm verilerini kendin silebilirsin. Bu, sağlık verilerin için verdiğin açık rızayı geri almak anlamına da gelir. Telefonundaki kayıtların silinmez; uygulamayı hesapsız kullanmaya devam edebilirsin.</li>
-                        <li><strong class="text-slate-100">Paylaşımı durdurma:</strong> Paylaşım ekranından istediğin an tek dokunuşla kesebilirsin.</li>
-                        <li><strong class="text-slate-100">Diğer talepler:</strong> <a href="mailto:pery@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">pery@cygnuslabs.ai</a> adresine yazabilirsin. Talebini en geç 30 gün içinde yanıtlarız.</li>
+                        <li><strong class="text-fg">Silme ve rızayı geri alma:</strong> Uygulamada Ayarlar → Hesap → Hesabı Sil ile hesabını ve sunucudaki tüm verilerini kendin silebilirsin. Bu, sağlık verilerin için verdiğin açık rızayı geri almak anlamına da gelir. Telefonundaki kayıtların silinmez; uygulamayı hesapsız kullanmaya devam edebilirsin.</li>
+                        <li><strong class="text-fg">Paylaşımı durdurma:</strong> Paylaşım ekranından istediğin an tek dokunuşla kesebilirsin.</li>
+                        <li><strong class="text-fg">Diğer talepler:</strong> <a href="mailto:pery@cygnuslabs.ai" class="text-accent hover:underline">pery@cygnuslabs.ai</a> adresine yazabilirsin. Talebini en geç 30 gün içinde yanıtlarız.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Çocuklar</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Çocuklar</h2>
                     <p>Uygulamanın hesapsız kullanımında veri telefondan çıkmadığı için yaş sınırı yoktur. Hesap açmak ve paylaşım özelliği 18 yaşını doldurmuş kullanıcılar içindir.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">10. Değişiklikler</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">10. Değişiklikler</h2>
                     <p>Bu metni güncelleyebiliriz. Verilerinin işlenme amacını, alıcılarını ya da aktarıldığı yerleri değiştiren bir güncellemede, hesaplı kullanıma devam etmeden önce rızanı yeniden isteriz.</p>
                 </section>
             </div>
@@ -196,49 +175,49 @@
                  AB'deki kullanıcılara açılırsa GDPR bölümü (temsilci, şikâyet hakkı) hukukçuyla eklenmeli. -->
             <div id="content-en" lang="en" class="hidden">
             <div class="mb-8">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Pery Privacy Policy</h1>
-                <p class="text-slate-400 text-sm">Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 1 · Effective: 9 October 2026</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Pery Privacy Policy</h1>
+                <p class="text-muted text-sm">Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 1 · Effective: 9 October 2026</p>
             </div>
 
-            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
-                <p class="font-semibold text-white mb-2">In short</p>
-                <ul class="list-disc pl-6 space-y-1 text-slate-300">
-                    <li>If you don't create an account, your records stay <strong class="text-slate-100">only on your phone</strong> and are never sent to any server.</li>
-                    <li>If you create an account, your records are stored on our server in Germany (Frankfurt) for syncing across devices and for backups. We ask for your separate <strong class="text-slate-100">explicit consent</strong> for this.</li>
-                    <li>We <strong class="text-slate-100">never sell</strong> your data or use it for advertising; the app contains no advertising or analytics tools.</li>
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">In short</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>If you don't create an account, your records stay <strong class="text-fg">only on your phone</strong> and are never sent to any server.</li>
+                    <li>If you create an account, your records are stored on our server in Germany (Frankfurt) for syncing across devices and for backups. We ask for your separate <strong class="text-fg">explicit consent</strong> for this.</li>
+                    <li>We <strong class="text-fg">never sell</strong> your data or use it for advertising; the app contains no advertising or analytics tools.</li>
                     <li>You can delete your account from within the app at any time.</li>
                 </ul>
             </div>
 
-            <div class="space-y-10 text-slate-300 leading-relaxed">
+            <div class="space-y-10 text-fg/80 leading-relaxed">
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Data controller</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Data controller</h2>
                     <p>Pery is an app developed by Çağan Bıçakçı under the name CygnusLabs. Under the Turkish Personal Data Protection Law No. 6698 ("KVKK"), the data controller is Çağan Bıçakçı.</p>
-                    <p class="mt-2">Contact: <a href="mailto:pery@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">pery@cygnuslabs.ai</a></p>
+                    <p class="mt-2">Contact: <a href="mailto:pery@cygnuslabs.ai" class="text-accent hover:underline">pery@cygnuslabs.ai</a></p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. Two ways to use Pery</h2>
-                    <h3 class="font-semibold text-slate-100 mt-4 mb-1">Without an account (default)</h3>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. Two ways to use Pery</h2>
+                    <h3 class="font-semibold text-fg mt-4 mb-1">Without an account (default)</h3>
                     <p>You can use the app without creating an account. In that case nothing you enter ever leaves your phone; predictions and calculations happen on your device. We cannot see or process this data. It is deleted when you remove the app or use "Reset All Data" (<em>Tüm Verileri Sıfırla</em> — the app is currently in Turkish only).</p>
-                    <h3 class="font-semibold text-slate-100 mt-4 mb-1">With an account (optional)</h3>
-                    <p>If you create an account with your email address, your records are stored on our server so they can be synced across your devices, restored if you lose your phone, and, if you choose, shared with someone close to you. Creating an account is limited to users <strong class="text-slate-100">aged 18 or over</strong>.</p>
+                    <h3 class="font-semibold text-fg mt-4 mb-1">With an account (optional)</h3>
+                    <p>If you create an account with your email address, your records are stored on our server so they can be synced across your devices, restored if you lose your phone, and, if you choose, shared with someone close to you. Creating an account is limited to users <strong class="text-fg">aged 18 or over</strong>.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. What data we process</h2>
-                    <p>The following is sent to the server <strong class="text-slate-100">only when you use an account</strong>:</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. What data we process</h2>
+                    <p>The following is sent to the server <strong class="text-fg">only when you use an account</strong>:</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Data</th><th class="py-2 pr-4 font-medium">Examples</th><th class="py-2 font-medium">Why</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Data</th><th class="py-2 pr-4 font-medium">Examples</th><th class="py-2 font-medium">Why</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Identity and contact</td><td class="py-2 pr-4">Email address</td><td class="py-2">Signing in (a one-time code sent to your email)</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profile</td><td class="py-2 pr-4">Your name, date of birth, height, weight, your goal for using the app</td><td class="py-2">Syncing across devices; your name is shown to the other person in sharing requests</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4"><strong class="text-slate-100">Health data</strong> (special category)</td><td class="py-2 pr-4">Period start/end dates, cycle and period length, daily mood, symptoms and their intensity, feelings, water intake, names and descriptions of symptoms/feelings you add yourself</td><td class="py-2">Syncing across devices, backups and (if you turn it on) sharing</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Sharing details</td><td class="py-2 pr-4">Who you share with, what you share, notification preferences</td><td class="py-2">Making the sharing feature work</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Device push token</td><td class="py-2 pr-4">Apple/Expo push token</td><td class="py-2">Delivering sharing notifications to your device</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Identity and contact</td><td class="py-2 pr-4">Email address</td><td class="py-2">Signing in (a one-time code sent to your email)</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profile</td><td class="py-2 pr-4">Your name, date of birth, height, weight, your goal for using the app</td><td class="py-2">Syncing across devices; your name is shown to the other person in sharing requests</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4"><strong class="text-fg">Health data</strong> (special category)</td><td class="py-2 pr-4">Period start/end dates, cycle and period length, daily mood, symptoms and their intensity, feelings, water intake, names and descriptions of symptoms/feelings you add yourself</td><td class="py-2">Syncing across devices, backups and (if you turn it on) sharing</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Sharing details</td><td class="py-2 pr-4">Who you share with, what you share, notification preferences</td><td class="py-2">Making the sharing feature work</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Device push token</td><td class="py-2 pr-4">Apple/Expo push token</td><td class="py-2">Delivering sharing notifications to your device</td></tr>
                                 <tr><td class="py-2 pr-4">Technical logs</td><td class="py-2 pr-4">IP address, request time</td><td class="py-2">Security and abuse prevention (server logs)</td></tr>
                             </tbody>
                         </table>
@@ -247,70 +226,70 @@
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Legal bases</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Legal bases</h2>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li><strong class="text-slate-100">Health data:</strong> your <strong class="text-slate-100">explicit consent</strong> under Article 6 of the KVKK. We ask for it separately and explicitly when you create an account; if you don't consent, no account is created and you can keep using the app without one.</li>
-                        <li><strong class="text-slate-100">Account and contact details:</strong> performance of the service (contract), KVKK Article 5(2)(c).</li>
-                        <li><strong class="text-slate-100">Technical logs:</strong> our legitimate interest in keeping the service secure, KVKK Article 5(2)(f).</li>
-                        <li><strong class="text-slate-100">Sharing with someone close to you:</strong> for every share we list the exact data that will be shared and ask for a separate explicit consent.</li>
+                        <li><strong class="text-fg">Health data:</strong> your <strong class="text-fg">explicit consent</strong> under Article 6 of the KVKK. We ask for it separately and explicitly when you create an account; if you don't consent, no account is created and you can keep using the app without one.</li>
+                        <li><strong class="text-fg">Account and contact details:</strong> performance of the service (contract), KVKK Article 5(2)(c).</li>
+                        <li><strong class="text-fg">Technical logs:</strong> our legitimate interest in keeping the service secure, KVKK Article 5(2)(f).</li>
+                        <li><strong class="text-fg">Sharing with someone close to you:</strong> for every share we list the exact data that will be shared and ask for a separate explicit consent.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Where data is stored and who receives it</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Where data is stored and who receives it</h2>
                     <p>We do not sell your data or share it with anyone for marketing. To provide the service we use the following service providers:</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Provider</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 pr-4 font-medium">Location</th><th class="py-2 font-medium">Data</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Provider</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 pr-4 font-medium">Location</th><th class="py-2 font-medium">Data</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Oracle Cloud</td><td class="py-2 pr-4">Server hosting</td><td class="py-2 pr-4">Germany (Frankfurt)</td><td class="py-2">All account data</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Cloudflare R2</td><td class="py-2 pr-4">Encrypted backups</td><td class="py-2 pr-4">European Union</td><td class="py-2">Backup of the server database</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Google (Gmail)</td><td class="py-2 pr-4">Sending sign-in code emails</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">Your email address and the sign-in code</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Oracle Cloud</td><td class="py-2 pr-4">Server hosting</td><td class="py-2 pr-4">Germany (Frankfurt)</td><td class="py-2">All account data</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Cloudflare R2</td><td class="py-2 pr-4">Encrypted backups</td><td class="py-2 pr-4">European Union</td><td class="py-2">Backup of the server database</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Google (Gmail)</td><td class="py-2 pr-4">Sending sign-in code emails</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">Your email address and the sign-in code</td></tr>
                                 <tr><td class="py-2 pr-4">Expo and Apple</td><td class="py-2 pr-4">Delivering notifications</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">Push token and notification text</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-3"><strong class="text-slate-100">About international transfers:</strong> The server and backups are in the European Union. Sign-in emails and notifications, however, are delivered through providers that also operate in the USA. Sharing notifications (e.g. "Period started") may carry health information this way; you can turn these notifications off at any time. We ask for your consent to these transfers as well when you create an account.</p>
+                    <p class="mt-3"><strong class="text-fg">About international transfers:</strong> The server and backups are in the European Union. Sign-in emails and notifications, however, are delivered through providers that also operate in the USA. Sharing notifications (e.g. "Period started") may carry health information this way; you can turn these notifications off at any time. We ask for your consent to these transfers as well when you create an account.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. How long we keep data</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. How long we keep data</h2>
                     <ul class="list-disc pl-6 space-y-1">
                         <li>Account data is kept until you delete your account.</li>
-                        <li>When you delete your account, your data and shares on the server are deleted immediately. Because backups rotate automatically, deleted data disappears from backups <strong class="text-slate-100">within 30 days</strong> at the latest.</li>
+                        <li>When you delete your account, your data and shares on the server are deleted immediately. Because backups rotate automatically, deleted data disappears from backups <strong class="text-fg">within 30 days</strong> at the latest.</li>
                         <li>Server logs (IP addresses) are kept for a short time and deleted automatically.</li>
                         <li>Your push token is deleted when you sign out or delete your account.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Security</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Security</h2>
                     <p>All connections between your device and the server are encrypted (TLS). Each user can only access their own records; when sharing, the other person only sees the data you selected and approved, and never sees the raw form of your daily logs.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Your rights (KVKK Article 11)</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Your rights (KVKK Article 11)</h2>
                     <p>You have the right to learn whether your data is processed, request information, ask for it to be corrected or deleted, learn who it was transferred to, object, and claim compensation for damages.</p>
                     <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li><strong class="text-slate-100">Deletion and withdrawing consent:</strong> In the app, go to Settings (<em>Ayarlar</em>) → Account (<em>Hesap</em>) → Delete Account (<em>Hesabı Sil</em>) to delete your account and all your data on the server yourself. This also withdraws the explicit consent you gave for your health data. Records on your phone are not deleted; you can keep using the app without an account.</li>
-                        <li><strong class="text-slate-100">Stopping a share:</strong> You can end any share with a single tap on the Sharing (<em>Paylaşım</em>) screen.</li>
-                        <li><strong class="text-slate-100">Other requests:</strong> Write to <a href="mailto:pery@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">pery@cygnuslabs.ai</a>. We respond within 30 days at the latest.</li>
+                        <li><strong class="text-fg">Deletion and withdrawing consent:</strong> In the app, go to Settings (<em>Ayarlar</em>) → Account (<em>Hesap</em>) → Delete Account (<em>Hesabı Sil</em>) to delete your account and all your data on the server yourself. This also withdraws the explicit consent you gave for your health data. Records on your phone are not deleted; you can keep using the app without an account.</li>
+                        <li><strong class="text-fg">Stopping a share:</strong> You can end any share with a single tap on the Sharing (<em>Paylaşım</em>) screen.</li>
+                        <li><strong class="text-fg">Other requests:</strong> Write to <a href="mailto:pery@cygnuslabs.ai" class="text-accent hover:underline">pery@cygnuslabs.ai</a>. We respond within 30 days at the latest.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Children</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Children</h2>
                     <p>Without an account, no data leaves the phone, so there is no age limit for that use. Creating an account and the sharing feature are for users aged 18 or over.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">10. Changes</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">10. Changes</h2>
                     <p>We may update this policy. If an update changes the purposes of processing, the recipients or the places your data is transferred to, we will ask for your consent again before you continue using an account.</p>
                 </section>
 
-                <p class="text-sm text-slate-400">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
+                <p class="text-sm text-muted">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
             </div>
             </div>
         </div>
@@ -342,8 +321,8 @@
 
             // Dil: ?lang=en|tr önceliklidir; yoksa cihaz dili (Türkçe değilse İngilizce).
             // Uygulama Türkçe olduğundan oradan gelen Türk kullanıcı Türkçe metni görür.
-            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white';
-            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600';
+            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-fg bg-fg text-bg';
+            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-line text-muted hover:text-fg';
             function setLanguage(lang) {
                 var tr = lang === 'tr';
                 document.getElementById('content-tr').classList.toggle('hidden', !tr);

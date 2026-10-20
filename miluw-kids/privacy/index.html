@@ -34,40 +34,19 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#06b6d4",
-                        secondary: "#0891b2",
-                        "background-dark": "#0f172a",
-                        "surface-dark": "#1e293b",
-                    },
-                    fontFamily: {
-                        display: ["Plus Jakarta Sans", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                    },
-                },
-            },
-        };
-    </script>
+    <!-- Theme: Tailwind colors + light/dark mode (shared by every page) -->
+    <script src="scripts/theme.js"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="bg-background-dark text-slate-100 selection:bg-primary selection:text-white">
+<body class="bg-bg text-fg">
 
     <div id="header"></div>
 
     <main class="pt-24 sm:pt-28 pb-16 sm:pb-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-primary transition-colors text-sm mb-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-muted hover:text-fg transition-colors text-sm mb-8">
                 <span class="material-symbols-outlined text-lg">arrow_back</span>
                 <span id="back-text">Ana Sayfaya Dön</span>
             </a>
@@ -79,99 +58,99 @@
 
             <div id="content-tr" lang="tr">
             <div class="mb-8">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Miluw Kids Gizlilik Politikası</h1>
-                <p class="text-slate-400 text-sm">KVKK Aydınlatma Metni · Sürüm 1 · Yürürlük: 20 Ekim 2026</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Miluw Kids Gizlilik Politikası</h1>
+                <p class="text-muted text-sm">KVKK Aydınlatma Metni · Sürüm 1 · Yürürlük: 20 Ekim 2026</p>
             </div>
 
-            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
-                <p class="font-semibold text-white mb-2">Kısaca</p>
-                <ul class="list-disc pl-6 space-y-1 text-slate-300">
-                    <li>Çocuğunuzun adı, yaşı, profil fotoğrafı ve öğrenme ilerlemesi <strong class="text-slate-100">yalnızca cihazınızda</strong> saklanır; hiçbir sunucuya gönderilmez ve biz bu bilgileri göremeyiz.</li>
-                    <li>Uygulamada <strong class="text-slate-100">hesap, reklam, analitik ya da kullanıcı takibi yoktur</strong>. Uygulama içi satın alma da yoktur.</li>
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">Kısaca</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>Çocuğunuzun adı, yaşı, profil fotoğrafı ve öğrenme ilerlemesi <strong class="text-fg">yalnızca cihazınızda</strong> saklanır; hiçbir sunucuya gönderilmez ve biz bu bilgileri göremeyiz.</li>
+                    <li>Uygulamada <strong class="text-fg">hesap, reklam, analitik ya da kullanıcı takibi yoktur</strong>. Uygulama içi satın alma da yoktur.</li>
                     <li>Uygulama internete yalnızca öğrenme içeriğini indirmek ve yeni sürüm olup olmadığını kontrol etmek için bağlanır; bu bağlantılarda kişisel veri gönderilmez.</li>
                     <li>Uygulamayı sildiğinizde tüm veriler cihazdan silinir; profilden "Çıkış Yap" da profil ve ilerleme bilgilerini siler.</li>
                 </ul>
             </div>
 
-            <div class="space-y-10 text-slate-300 leading-relaxed">
+            <div class="space-y-10 text-fg/80 leading-relaxed">
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Veri sorumlusu</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Veri sorumlusu</h2>
                     <p>Miluw Kids, Çağan Bıçakçı tarafından CygnusLabs adıyla geliştirilen, okul öncesi çocuklara harfleri, sayıları, renkleri, şekilleri, hayvanları ve taşıtları oyunlarla öğreten bir uygulamadır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu Çağan Bıçakçı'dır.</p>
-                    <p class="mt-2">İletişim: <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a></p>
+                    <p class="mt-2">İletişim: <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a></p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. Cihazınızda saklanan bilgiler</h2>
-                    <p>Uygulamayı kurarken ya da kullanırken girdiğiniz aşağıdaki bilgiler <strong class="text-slate-100">yalnızca cihazınızda</strong> tutulur. Hiçbir sunucuya gönderilmez; biz bu bilgilere erişemeyiz ve onları işlemeyiz.</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. Cihazınızda saklanan bilgiler</h2>
+                    <p>Uygulamayı kurarken ya da kullanırken girdiğiniz aşağıdaki bilgiler <strong class="text-fg">yalnızca cihazınızda</strong> tutulur. Hiçbir sunucuya gönderilmez; biz bu bilgilere erişemeyiz ve onları işlemeyiz.</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Bilgi</th><th class="py-2 pr-4 font-medium">Örnek</th><th class="py-2 font-medium">Neden</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Bilgi</th><th class="py-2 pr-4 font-medium">Örnek</th><th class="py-2 font-medium">Neden</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profil</td><td class="py-2 pr-4">Çocuğun adı (ya da takma adı) ve yaşı</td><td class="py-2">Uygulamada çocuğa adıyla seslenmek</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profil fotoğrafı (isteğe bağlı)</td><td class="py-2 pr-4">Kamerayla çekilen ya da galeriden seçilen bir fotoğraf</td><td class="py-2">Profilde gösterilmek</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Öğrenme ilerlemesi</td><td class="py-2 pr-4">Tamamlanan harfler ve sayılar, toplanan yıldızlar, seviye</td><td class="py-2">Kalınan yerden devam etmek, ilerlemeyi göstermek</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profil</td><td class="py-2 pr-4">Çocuğun adı (ya da takma adı) ve yaşı</td><td class="py-2">Uygulamada çocuğa adıyla seslenmek</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profil fotoğrafı (isteğe bağlı)</td><td class="py-2 pr-4">Kamerayla çekilen ya da galeriden seçilen bir fotoğraf</td><td class="py-2">Profilde gösterilmek</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Öğrenme ilerlemesi</td><td class="py-2 pr-4">Tamamlanan harfler ve sayılar, toplanan yıldızlar, seviye</td><td class="py-2">Kalınan yerden devam etmek, ilerlemeyi göstermek</td></tr>
                                 <tr><td class="py-2 pr-4">Ayarlar</td><td class="py-2 pr-4">Uygulama dili, müzik açık/kapalı, oyun kilidi</td><td class="py-2">Tercihlerinizi hatırlamak</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <h3 class="font-semibold text-slate-100 mt-5 mb-1">Kamera ve fotoğraf izni</h3>
+                    <h3 class="font-semibold text-fg mt-5 mb-1">Kamera ve fotoğraf izni</h3>
                     <p>Uygulama kameraya ya da fotoğraf galerisine yalnızca siz profil fotoğrafı eklemek istediğinizde, izninizi alarak erişir. Seçilen fotoğraf cihazda kalır ve hiçbir yere yüklenmez.</p>
-                    <h3 class="font-semibold text-slate-100 mt-5 mb-1">Erişmediğimiz bilgiler</h3>
+                    <h3 class="font-semibold text-fg mt-5 mb-1">Erişmediğimiz bilgiler</h3>
                     <p>Uygulama mikrofonu kullanmaz, çocuğunuzun sesini kaydetmez. Konum, rehber, takvim ya da sağlık verilerine erişmez. Bildirim göndermez.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. İnternet bağlantıları</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. İnternet bağlantıları</h2>
                     <p>Uygulama yalnızca aşağıdaki iki amaçla internete bağlanır. Bu bağlantılarda çocuğunuz ya da sizinle ilgili hiçbir bilgi gönderilmez. Her internet bağlantısında olduğu gibi, bağlandığımız hizmet sağlayıcı cihazınızın IP adresi gibi teknik bilgileri bağlantının kurulabilmesi için görür.</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Sağlayıcı</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 pr-4 font-medium">Konum</th><th class="py-2 font-medium">Gönderilen</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Sağlayıcı</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 pr-4 font-medium">Konum</th><th class="py-2 font-medium">Gönderilen</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Google (Firebase)</td><td class="py-2 pr-4">Öğrenme içeriğini (harf, renk, hayvan listeleri gibi) indirmek</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">Kişisel veri yok; yalnızca bağlantı için gereken teknik bilgiler (IP adresi)</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Google (Firebase)</td><td class="py-2 pr-4">Öğrenme içeriğini (harf, renk, hayvan listeleri gibi) indirmek</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">Kişisel veri yok; yalnızca bağlantı için gereken teknik bilgiler (IP adresi)</td></tr>
                                 <tr><td class="py-2 pr-4">Apple (App Store)</td><td class="py-2 pr-4">Uygulamanın yeni bir sürümü olup olmadığını kontrol etmek</td><td class="py-2 pr-4">ABD dâhil</td><td class="py-2">Uygulamanın App Store kimliği ve ülke kodu; teknik bilgiler (IP adresi)</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-3">Uygulama ayrıca Apple'ın sağladığı hizmetler üzerinden indirilir ve güncellenir; bu süreçlerde Apple'ın kendi <a href="https://www.apple.com/legal/privacy/" class="text-primary hover:text-secondary transition-colors" rel="noopener" target="_blank">gizlilik politikası</a> geçerlidir.</p>
+                    <p class="mt-3">Uygulama ayrıca Apple'ın sağladığı hizmetler üzerinden indirilir ve güncellenir; bu süreçlerde Apple'ın kendi <a href="https://www.apple.com/legal/privacy/" class="text-accent hover:underline" rel="noopener" target="_blank">gizlilik politikası</a> geçerlidir.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Seslendirmeler</h2>
-                    <p>Uygulamadaki harf, sayı ve kelime seslendirmeleri <strong class="text-slate-100">ElevenLabs</strong> yapay zekâ seslendirme hizmetiyle önceden üretilmiş ve uygulamanın içine yerleştirilmiştir. Uygulama çalışırken ElevenLabs'e bağlanmaz ve ona hiçbir bilgi göndermez. Kaydı bulunmayan nadir kelimeler, cihazınızın kendi yerleşik ses motoruyla (cihaz üzerinde) okunur.</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Seslendirmeler</h2>
+                    <p>Uygulamadaki harf, sayı ve kelime seslendirmeleri <strong class="text-fg">ElevenLabs</strong> yapay zekâ seslendirme hizmetiyle önceden üretilmiş ve uygulamanın içine yerleştirilmiştir. Uygulama çalışırken ElevenLabs'e bağlanmaz ve ona hiçbir bilgi göndermez. Kaydı bulunmayan nadir kelimeler, cihazınızın kendi yerleşik ses motoruyla (cihaz üzerinde) okunur.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Hukuki sebepler</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Hukuki sebepler</h2>
                     <p>Cihazınızda saklanan bilgileri biz işlemediğimiz için bunlar için ayrıca bir hukuki sebebe dayanmayız. İnternet bağlantılarındaki teknik bilgiler (IP adresi), uygulamanın çalışabilmesi için gerekli olduğundan KVKK m.5/2-c (hizmetin ifası) ve m.5/2-f (meşru menfaat) kapsamında, yalnızca bağlantının kurulması amacıyla hizmet sağlayıcılar tarafından işlenir.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. Saklama süresi ve silme</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. Saklama süresi ve silme</h2>
                     <ul class="list-disc pl-6 space-y-1">
                         <li>Cihazınızdaki bilgiler, siz silene kadar cihazınızda kalır.</li>
-                        <li>Profil → <strong class="text-slate-100">İlerlemeyi Sıfırla</strong> ile istediğiniz modülün ilerlemesini silebilirsiniz.</li>
-                        <li>Profil → <strong class="text-slate-100">Çıkış Yap</strong> profil bilgilerini ve modül ilerlemesini cihazdan siler.</li>
-                        <li>Uygulamayı cihazdan sildiğinizde uygulamaya ait <strong class="text-slate-100">tüm</strong> bilgiler (yıldızlar ve ayarlar dâhil) silinir.</li>
+                        <li>Profil → <strong class="text-fg">İlerlemeyi Sıfırla</strong> ile istediğiniz modülün ilerlemesini silebilirsiniz.</li>
+                        <li>Profil → <strong class="text-fg">Çıkış Yap</strong> profil bilgilerini ve modül ilerlemesini cihazdan siler.</li>
+                        <li>Uygulamayı cihazdan sildiğinizde uygulamaya ait <strong class="text-fg">tüm</strong> bilgiler (yıldızlar ve ayarlar dâhil) silinir.</li>
                         <li>Sunucularımızda size ya da çocuğunuza ait bir kayıt tutmadığımız için bizim tarafımızda silinecek bir veri yoktur.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Çocuklar</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Çocuklar</h2>
                     <p>Miluw Kids, okul öncesi çocuklar için tasarlanmıştır ve bir ebeveynin ya da yetişkinin kurmasını öneririz. Çocuklardan sunucularımıza kişisel bilgi toplamayız. Uygulamada reklam ya da başka kullanıcılarla iletişim kurma imkânı yoktur. Uygulamanın dışına açılan tek bağlantı, yeni bir sürüm olduğunda uygulamanın App Store sayfasını açan güncelleme butonudur.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Haklarınız (KVKK m.11)</h2>
-                    <p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, aktarıldığı tarafları öğrenme, itiraz etme ve zararın giderilmesini talep etme haklarınız vardır. Bilgileriniz yalnızca cihazınızda bulunduğundan, düzeltme ve silme işlemlerini uygulamanın içinden kendiniz yapabilirsiniz. Diğer talepleriniz için <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a> adresine yazabilirsiniz; talebinizi en geç 30 gün içinde yanıtlarız.</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Haklarınız (KVKK m.11)</h2>
+                    <p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, aktarıldığı tarafları öğrenme, itiraz etme ve zararın giderilmesini talep etme haklarınız vardır. Bilgileriniz yalnızca cihazınızda bulunduğundan, düzeltme ve silme işlemlerini uygulamanın içinden kendiniz yapabilirsiniz. Diğer talepleriniz için <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a> adresine yazabilirsiniz; talebinizi en geç 30 gün içinde yanıtlarız.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Değişiklikler</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Değişiklikler</h2>
                     <p>Bu metni güncelleyebiliriz. Uygulamaya bilgilerinizi cihaz dışına gönderen bir özellik eklenirse, bu özellik kullanılmadan önce metni güncelleriz ve gerekiyorsa izninizi isteriz. Güncel metin her zaman bu sayfada yayımlanır.</p>
                 </section>
             </div>
@@ -180,103 +159,103 @@
             <!-- ENGLISH — Türkçe metnin çevirisidir. KVKK açısından esas metin Türkçedir. -->
             <div id="content-en" lang="en" class="hidden">
             <div class="mb-8">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Miluw Kids Privacy Policy</h1>
-                <p class="text-slate-400 text-sm">Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 1 · Effective: 20 October 2026</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Miluw Kids Privacy Policy</h1>
+                <p class="text-muted text-sm">Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 1 · Effective: 20 October 2026</p>
             </div>
 
-            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
-                <p class="font-semibold text-white mb-2">In short</p>
-                <ul class="list-disc pl-6 space-y-1 text-slate-300">
-                    <li>Your child's name, age, profile photo and learning progress are stored <strong class="text-slate-100">only on your device</strong>. They are never sent to any server, and we cannot see them.</li>
-                    <li>The app has <strong class="text-slate-100">no accounts, advertising, analytics or tracking</strong>, and no in-app purchases.</li>
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">In short</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>Your child's name, age, profile photo and learning progress are stored <strong class="text-fg">only on your device</strong>. They are never sent to any server, and we cannot see them.</li>
+                    <li>The app has <strong class="text-fg">no accounts, advertising, analytics or tracking</strong>, and no in-app purchases.</li>
                     <li>The app connects to the internet only to download learning content and to check for a new version; no personal data is sent in these connections.</li>
                     <li>Deleting the app removes all data from the device; "Sign Out" in the profile also deletes the profile and progress.</li>
                 </ul>
             </div>
 
-            <div class="space-y-10 text-slate-300 leading-relaxed">
+            <div class="space-y-10 text-fg/80 leading-relaxed">
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Data controller</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Data controller</h2>
                     <p>Miluw Kids is an app developed by Çağan Bıçakçı under the name CygnusLabs that teaches preschool children letters, numbers, colors, shapes, animals and vehicles through games. Under the Turkish Personal Data Protection Law No. 6698 ("KVKK"), the data controller is Çağan Bıçakçı.</p>
-                    <p class="mt-2">Contact: <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a></p>
+                    <p class="mt-2">Contact: <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a></p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. Information stored on your device</h2>
-                    <p>The following information, which you enter when setting up or using the app, is kept <strong class="text-slate-100">only on your device</strong>. It is never sent to any server; we cannot access or process it.</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. Information stored on your device</h2>
+                    <p>The following information, which you enter when setting up or using the app, is kept <strong class="text-fg">only on your device</strong>. It is never sent to any server; we cannot access or process it.</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Information</th><th class="py-2 pr-4 font-medium">Examples</th><th class="py-2 font-medium">Why</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Information</th><th class="py-2 pr-4 font-medium">Examples</th><th class="py-2 font-medium">Why</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profile</td><td class="py-2 pr-4">The child's name (or nickname) and age</td><td class="py-2">Addressing the child by name in the app</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Profile photo (optional)</td><td class="py-2 pr-4">A photo taken with the camera or chosen from the library</td><td class="py-2">Showing it on the profile</td></tr>
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Learning progress</td><td class="py-2 pr-4">Completed letters and numbers, collected stars, level</td><td class="py-2">Continuing where the child left off and showing progress</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profile</td><td class="py-2 pr-4">The child's name (or nickname) and age</td><td class="py-2">Addressing the child by name in the app</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Profile photo (optional)</td><td class="py-2 pr-4">A photo taken with the camera or chosen from the library</td><td class="py-2">Showing it on the profile</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Learning progress</td><td class="py-2 pr-4">Completed letters and numbers, collected stars, level</td><td class="py-2">Continuing where the child left off and showing progress</td></tr>
                                 <tr><td class="py-2 pr-4">Settings</td><td class="py-2 pr-4">App language, music on/off, game lock</td><td class="py-2">Remembering your preferences</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <h3 class="font-semibold text-slate-100 mt-5 mb-1">Camera and photo access</h3>
+                    <h3 class="font-semibold text-fg mt-5 mb-1">Camera and photo access</h3>
                     <p>The app accesses the camera or the photo library only when you choose to add a profile photo, and only with your permission. The selected photo stays on the device and is never uploaded.</p>
-                    <h3 class="font-semibold text-slate-100 mt-5 mb-1">What we don't access</h3>
+                    <h3 class="font-semibold text-fg mt-5 mb-1">What we don't access</h3>
                     <p>The app does not use the microphone and never records your child's voice. It does not access location, contacts, calendars or health data. It does not send notifications.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. Internet connections</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. Internet connections</h2>
                     <p>The app connects to the internet only for the two purposes below. No information about your child or you is sent in these connections. As with any internet connection, the provider we connect to sees technical information such as your device's IP address so that the connection can be made.</p>
                     <div class="overflow-x-auto mt-3">
                         <table class="w-full text-sm text-left border-collapse">
-                            <thead class="text-slate-400">
-                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Provider</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 pr-4 font-medium">Location</th><th class="py-2 font-medium">What is sent</th></tr>
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Provider</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 pr-4 font-medium">Location</th><th class="py-2 font-medium">What is sent</th></tr>
                             </thead>
                             <tbody class="align-top">
-                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Google (Firebase)</td><td class="py-2 pr-4">Downloading learning content (such as letter, color and animal lists)</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">No personal data; only the technical information needed for the connection (IP address)</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Google (Firebase)</td><td class="py-2 pr-4">Downloading learning content (such as letter, color and animal lists)</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">No personal data; only the technical information needed for the connection (IP address)</td></tr>
                                 <tr><td class="py-2 pr-4">Apple (App Store)</td><td class="py-2 pr-4">Checking whether a new version of the app is available</td><td class="py-2 pr-4">Including the USA</td><td class="py-2">The app's App Store ID and a country code; technical information (IP address)</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="mt-3">The app is also downloaded and updated through services provided by Apple; Apple's own <a href="https://www.apple.com/legal/privacy/" class="text-primary hover:text-secondary transition-colors" rel="noopener" target="_blank">privacy policy</a> applies to those processes.</p>
+                    <p class="mt-3">The app is also downloaded and updated through services provided by Apple; Apple's own <a href="https://www.apple.com/legal/privacy/" class="text-accent hover:underline" rel="noopener" target="_blank">privacy policy</a> applies to those processes.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Voice recordings</h2>
-                    <p>The letter, number and word voice-overs in the app were generated in advance with the <strong class="text-slate-100">ElevenLabs</strong> AI voice service and are bundled with the app. The app does not connect to ElevenLabs while running and sends it no information. The few words without a recording are read by your device's own built-in speech engine (on the device).</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Voice recordings</h2>
+                    <p>The letter, number and word voice-overs in the app were generated in advance with the <strong class="text-fg">ElevenLabs</strong> AI voice service and are bundled with the app. The app does not connect to ElevenLabs while running and sends it no information. The few words without a recording are read by your device's own built-in speech engine (on the device).</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Legal bases</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Legal bases</h2>
                     <p>Since we do not process the information stored on your device, we do not rely on a legal basis for it. The technical information in internet connections (IP address) is needed for the app to work and is processed by the providers only to make the connection, under KVKK Article 5(2)(c) (performance of the service) and Article 5(2)(f) (legitimate interest).</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. How long data is kept and how to delete it</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. How long data is kept and how to delete it</h2>
                     <ul class="list-disc pl-6 space-y-1">
                         <li>Information on your device stays there until you delete it.</li>
-                        <li>Profile → <strong class="text-slate-100">Reset Progress</strong> (<em>İlerlemeyi Sıfırla</em>) deletes the progress of any module you choose.</li>
-                        <li>Profile → <strong class="text-slate-100">Sign Out</strong> (<em>Çıkış Yap</em>) deletes the profile and the module progress from the device.</li>
-                        <li>Deleting the app from your device removes <strong class="text-slate-100">all</strong> of its information (including stars and settings).</li>
+                        <li>Profile → <strong class="text-fg">Reset Progress</strong> (<em>İlerlemeyi Sıfırla</em>) deletes the progress of any module you choose.</li>
+                        <li>Profile → <strong class="text-fg">Sign Out</strong> (<em>Çıkış Yap</em>) deletes the profile and the module progress from the device.</li>
+                        <li>Deleting the app from your device removes <strong class="text-fg">all</strong> of its information (including stars and settings).</li>
                         <li>We keep no records about you or your child on our servers, so there is nothing to delete on our side.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Children</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Children</h2>
                     <p>Miluw Kids is designed for preschool children, and we recommend that a parent or adult sets it up. We do not collect personal information from children on our servers. The app contains no advertising and no way to communicate with other users. The only link out of the app is the update button, which opens the app's App Store page when a new version is available.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Your rights (KVKK Article 11)</h2>
-                    <p>You have the right to learn whether your personal data is processed, request information, ask for it to be corrected or deleted, learn who it was transferred to, object, and claim compensation for damages. Because your information is only on your device, you can correct or delete it yourself in the app. For any other request, write to <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a>; we respond within 30 days at the latest.</p>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Your rights (KVKK Article 11)</h2>
+                    <p>You have the right to learn whether your personal data is processed, request information, ask for it to be corrected or deleted, learn who it was transferred to, object, and claim compensation for damages. Because your information is only on your device, you can correct or delete it yourself in the app. For any other request, write to <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a>; we respond within 30 days at the latest.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Changes</h2>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Changes</h2>
                     <p>We may update this policy. If a feature that sends your information off the device is ever added to the app, we will update this policy before that feature is used and ask for your consent where required. The current version is always published on this page.</p>
                 </section>
 
-                <p class="text-sm text-slate-400">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
+                <p class="text-sm text-muted">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
             </div>
             </div>
         </div>
@@ -307,8 +286,8 @@
             }
 
             // Dil: ?lang=en|tr önceliklidir; yoksa cihaz dili (Türkçe değilse İngilizce).
-            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white';
-            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600';
+            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-fg bg-fg text-bg';
+            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-line text-muted hover:text-fg';
             function setLanguage(lang) {
                 var tr = lang === 'tr';
                 document.getElementById('content-tr').classList.toggle('hidden', !tr);
