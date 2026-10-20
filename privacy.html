@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<!--
+  CygnusLabs — Genel Gizlilik Politikası (çatı metin).  →  https://cygnuslabs.ai/privacy.html
+
+  Web sitesini ve CygnusLabs uygulamalarını kapsar. Kendi gizlilik politikası olan uygulamada
+  (Pery, Miluw Kids) o metin önceliklidir; bu sayfadaki "Uygulamalarımız" tablosu onlara bağlanır.
+  Budget Flux'ın ayrı bir sayfası yok: App Store'daki adresi bu sayfayı gösterir, ayrıntısı 4. bölümde.
+  Yeni bir uygulama yayımlanınca tabloya eklenmeli; veri işleyişi farklıysa kendi sayfası açılmalı.
+
+  TASLAK — HUKUKİ İNCELEME BEKLİYOR (özellikle yurt dışına aktarım, KVKK m.9).
+-->
+<html class="scroll-smooth" lang="tr">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Privacy Policy | CygnusLabs</title>
+    <title>Gizlilik Politikası | CygnusLabs</title>
+    <meta name="description" content="CygnusLabs web sitesi ve uygulamaları için genel gizlilik politikası.">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -42,172 +53,239 @@
 </head>
 <body class="bg-background-dark text-slate-100 selection:bg-primary selection:text-white">
 
-    <!-- Component Containers -->
     <div id="header"></div>
 
-    <main class="pt-24 sm:pt-28 pb-16 sm:pb-24" id="privacy-main">
+    <main class="pt-24 sm:pt-28 pb-16 sm:pb-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-primary transition-colors text-sm mb-8" id="back-link">
+            <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-primary transition-colors text-sm mb-8">
                 <span class="material-symbols-outlined text-lg">arrow_back</span>
-                <span id="back-text">Back to Home</span>
+                <span id="back-text">Ana Sayfaya Dön</span>
             </a>
 
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-                <div>
-                    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2" data-i18n="title">Privacy Policy</h1>
-                    <p class="text-slate-400 text-sm" data-i18n="updated">Last updated: February 2026</p>
-                </div>
-                <div class="flex gap-2" role="group" aria-label="Language">
-                    <button type="button" id="lang-en" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white" aria-pressed="true">English</button>
-                    <button type="button" id="lang-tr" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600" aria-pressed="false">Türkçe</button>
-                </div>
+            <div class="flex justify-end gap-2 mb-6" role="group" aria-label="Dil / Language">
+                <button type="button" id="lang-tr" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors">Türkçe</button>
+                <button type="button" id="lang-en" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors">English</button>
             </div>
 
-            <!-- English version -->
-            <div id="content-en" class="max-w-none space-y-8 text-slate-300">
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Introduction</h2>
-                    <p>We build mobile and web applications. This Privacy Policy describes how we collect, use, and share information when you use our applications and services. By using our apps, you agree to this policy.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. Information We Collect</h2>
-                    <p>Depending on the app, we may collect:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li><strong class="text-slate-200">Account data:</strong> email, name, or other details you provide when signing up.</li>
-                        <li><strong class="text-slate-200">Usage data:</strong> how you use the app (e.g., features used, session length) to improve our services.</li>
-                        <li><strong class="text-slate-200">Device data:</strong> device type, OS version, and app version for compatibility and support.</li>
-                        <li><strong class="text-slate-200">Data you create:</strong> content you save or generate inside the app (e.g., notes, preferences).</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. How We Use Your Information</h2>
-                    <p>We use the information we collect to:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li>Provide, maintain, and improve our applications</li>
-                        <li>Respond to your requests and support inquiries</li>
-                        <li>Send important notices (e.g., security or policy updates) where applicable</li>
-                        <li>Analyze usage to improve performance and user experience</li>
-                        <li>Comply with legal obligations</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Data Storage & Security</h2>
-                    <p>We store data on secure servers and take reasonable measures to protect it. Some data may be stored on your device only (e.g., via local storage). We do not retain your data longer than necessary for the purposes described in this policy or as required by law.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Third-Party Services</h2>
-                    <p>Our apps may use third-party services (e.g., analytics, cloud storage, authentication). Those services have their own privacy policies. We encourage you to review them. We do not sell your personal information to third parties.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. Your Rights</h2>
-                    <p>Depending on your location, you may have the right to:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li>Access or receive a copy of your data</li>
-                        <li>Correct or update your data</li>
-                        <li>Request deletion of your data</li>
-                        <li>Object to or restrict certain processing</li>
-                        <li>Data portability</li>
-                    </ul>
-                    <p class="mt-3">To exercise these rights, contact us at the email below.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Children</h2>
-                    <p>Our applications are not directed at children under 13 (or higher age where required). We do not knowingly collect personal information from children. If you believe we have collected such information, please contact us so we can delete it.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. We will post the updated version on this page and, for significant changes, we may notify you in the app or by email. Continued use of our apps after changes means you accept the updated policy.</p>
-                </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Contact Us</h2>
-                    <p>For questions about this Privacy Policy or your data, contact us at:</p>
-                    <p class="mt-2">
-                        <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a>
-                    </p>
-                    <p class="mt-2 text-slate-400 text-sm">CygnusLabs · Istanbul, Turkey</p>
-                </section>
+            <div id="content-tr" lang="tr">
+            <div class="mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Gizlilik Politikası</h1>
+                <p class="text-slate-400 text-sm">CygnusLabs web sitesi ve uygulamaları · KVKK Aydınlatma Metni · Sürüm 2 · Yürürlük: 20 Ekim 2026</p>
             </div>
 
-            <!-- Turkish version -->
-            <div id="content-tr" class="max-w-none space-y-8 text-slate-300 hidden">
+            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-white mb-2">Kısaca</p>
+                <ul class="list-disc pl-6 space-y-1 text-slate-300">
+                    <li>Uygulamalarımız verilerinizi mümkün olduğunca <strong class="text-slate-100">yalnızca cihazınızda</strong> tutar.</li>
+                    <li>Verilerinizi <strong class="text-slate-100">satmayız</strong>; uygulamalarımızda reklam, analitik ya da kullanıcı takibi yoktur.</li>
+                    <li>Kendi gizlilik politikası olan bir uygulamada <strong class="text-slate-100">o uygulamanın politikası geçerlidir</strong>. Çocuklara yönelik uygulamalarımızın her birinin kendi politikası vardır.</li>
+                    <li>Web sitemiz çerez ve analitik kullanmaz.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-10 text-slate-300 leading-relaxed">
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">1. Giriş</h2>
-                    <p>Mobil ve web uygulamaları geliştiriyoruz. Bu Gizlilik Politikası, uygulama ve hizmetlerimizi kullandığınızda bilgileri nasıl topladığımızı, kullandığımızı ve paylaştığımızı açıklar. Uygulamalarımızı kullanarak bu politikayı kabul etmiş olursunuz.</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">1. Kapsam ve veri sorumlusu</h2>
+                    <p>Bu politika, cygnuslabs.ai web sitesi ile Çağan Bıçakçı tarafından CygnusLabs adıyla geliştirilen mobil uygulamalar için geçerli genel ilkeleri anlatır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu Çağan Bıçakçı'dır.</p>
+                    <p class="mt-2">Bir uygulamanın kendi gizlilik politikası varsa, o uygulama için <strong class="text-slate-100">kendi politikası önceliklidir</strong>; bu sayfa yalnızca orada yer almayan konular için geçerlidir.</p>
+                    <p class="mt-2">İletişim: <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a></p>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">2. Topladığımız Bilgiler</h2>
-                    <p>Uygulamaya bağlı olarak şunları toplayabiliriz:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li><strong class="text-slate-200">Hesap verileri:</strong> kayıt olurken verdiğiniz e-posta, ad veya diğer bilgiler.</li>
-                        <li><strong class="text-slate-200">Kullanım verileri:</strong> hizmetlerimizi iyileştirmek için uygulamayı nasıl kullandığınız (kullanılan özellikler, oturum süresi vb.).</li>
-                        <li><strong class="text-slate-200">Cihaz verileri:</strong> uyumluluk ve destek için cihaz türü, işletim sistemi sürümü ve uygulama sürümü.</li>
-                        <li><strong class="text-slate-200">Oluşturduğunuz veriler:</strong> uygulama içinde kaydettiğiniz veya oluşturduğunuz içerik (notlar, tercihler vb.).</li>
+                    <h2 class="text-xl font-semibold text-white mb-3">2. Uygulamalarımız ve gizlilik politikaları</h2>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-slate-400">
+                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Uygulama</th><th class="py-2 pr-4 font-medium">Kimler için</th><th class="py-2 font-medium">Gizlilik politikası</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Miluw Kids</td><td class="py-2 pr-4">Okul öncesi çocuklar (ebeveyn kurulumuyla)</td><td class="py-2"><a href="miluw-kids/privacy/?lang=tr" class="text-primary hover:text-secondary transition-colors">Miluw Kids Gizlilik Politikası</a></td></tr>
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Pery</td><td class="py-2 pr-4">Yetişkinler (hesap için 18+)</td><td class="py-2"><a href="pery/privacy/?lang=tr" class="text-primary hover:text-secondary transition-colors">Pery Gizlilik Politikası</a></td></tr>
+                                <tr><td class="py-2 pr-4">Budget Flux</td><td class="py-2 pr-4">Yetişkinler</td><td class="py-2">Bu sayfa (<a href="#budget-flux-tr" class="text-primary hover:text-secondary transition-colors">4. bölüm</a>)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">3. Tüm uygulamalarımız için ilkeler</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong class="text-slate-100">Önce cihaz:</strong> Uygulamalara girdiğiniz bilgiler varsayılan olarak yalnızca cihazınızda saklanır. Bir özellik verilerinizi sunucuya gönderiyorsa (örneğin isteğe bağlı bir hesap), bu o uygulamanın politikasında açıkça anlatılır ve gerektiğinde izniniz istenir.</li>
+                        <li><strong class="text-slate-100">Satmak ve reklam yok:</strong> Verilerinizi satmayız, pazarlama için kimseyle paylaşmayız. Uygulamalarımızda reklam, analitik ya da uygulamalar arası takip aracı yoktur.</li>
+                        <li><strong class="text-slate-100">Gerekli bağlantılar:</strong> Bazı uygulamalar internete içerik ya da güncel bilgi (ör. döviz kuru) almak için bağlanır. Bağlanılan hizmet sağlayıcılar, bağlantının kurulabilmesi için cihazınızın IP adresi gibi teknik bilgileri görür; bu sağlayıcılar her uygulamanın bölümünde ya da kendi politikasında listelenir.</li>
+                        <li><strong class="text-slate-100">Uygulama mağazaları:</strong> Uygulamalar Apple App Store üzerinden indirilir ve güncellenir; bu süreçlerde Apple'ın kendi <a href="https://www.apple.com/legal/privacy/" class="text-primary hover:text-secondary transition-colors" rel="noopener" target="_blank">gizlilik politikası</a> geçerlidir.</li>
                     </ul>
                 </section>
-                <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">3. Bilgilerinizi Nasıl Kullanıyoruz</h2>
-                    <p>Topladığımız bilgileri şu amaçlarla kullanıyoruz:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li>Uygulamalarımızı sağlamak, sürdürmek ve iyileştirmek</li>
-                        <li>Talep ve destek sorularınıza yanıt vermek</li>
-                        <li>Uygun olduğunda önemli bildirimler göndermek (güvenlik veya politika güncellemeleri vb.)</li>
-                        <li>Performans ve kullanıcı deneyimini iyileştirmek için kullanımı analiz etmek</li>
-                        <li>Yasal yükümlülüklere uymak</li>
+
+                <section id="budget-flux-tr">
+                    <h2 class="text-xl font-semibold text-white mb-3">4. Budget Flux</h2>
+                    <p>Budget Flux'ta hesap yoktur. Girdiğiniz gelir ve giderler, kategoriler, bütçeler, planlanmış ödemeler, yatırımlarınız ve ayarlarınız <strong class="text-slate-100">yalnızca cihazınızda</strong> saklanır; biz bu bilgileri göremeyiz.</p>
+                    <p class="mt-3">Uygulama, güncel kurları ve fiyatları göstermek için aşağıdaki hizmetlere bağlanır. Bu isteklerde yalnızca sorgulanan para birimi ya da varlık kodu (ör. bir hisse veya fon kodu) gönderilir; tutarlarınız, işlemleriniz ya da kimliğinizle ilgili hiçbir bilgi gönderilmez.</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-slate-400">
+                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Hizmet</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 font-medium">Gönderilen</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Currency API (jsDelivr / Cloudflare Pages)</td><td class="py-2 pr-4">Döviz kurları</td><td class="py-2">Para birimi kodu; teknik bilgiler (IP adresi)</td></tr>
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Yahoo Finance, TradingView</td><td class="py-2 pr-4">Hisse, altın ve diğer piyasa fiyatları</td><td class="py-2">Varlık kodu; teknik bilgiler (IP adresi)</td></tr>
+                                <tr><td class="py-2 pr-4">TEFAS (CygnusLabs'in Cloudflare üzerindeki ara sunucusu aracılığıyla)</td><td class="py-2 pr-4">Yatırım fonu fiyatları</td><td class="py-2">Fon kodu; teknik bilgiler (IP adresi)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-1 mt-3">
+                        <li><strong class="text-slate-100">Bildirimler:</strong> Hatırlatmalar cihazınızda planlanır; bunun için hiçbir sunucu kullanılmaz.</li>
+                        <li><strong class="text-slate-100">Yedekleme:</strong> Yedek, sizin oluşturduğunuz ve nereye kaydedeceğinizi (ör. Dosyalar, iCloud Drive) sizin seçtiğiniz bir dosyadır; bize gönderilmez.</li>
+                        <li><strong class="text-slate-100">Silme:</strong> Uygulamayı sildiğinizde tüm veriler cihazdan silinir.</li>
                     </ul>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">4. Veri Saklama ve Güvenlik</h2>
-                    <p>Verileri güvenli sunucularda saklıyoruz ve korumak için makul önlemler alıyoruz. Bazı veriler yalnızca cihazınızda saklanabilir (ör. yerel depolama ile). Verilerinizi bu politikada belirtilen amaçlar veya yasanın gerektirdiği süreden daha uzun saklamıyoruz.</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">5. Web sitesi</h2>
+                    <p>cygnuslabs.ai çerez, analitik ya da form kullanmaz ve ziyaretçilerden kişisel bilgi toplamaz. Sayfalar, yazı tipi ve stil dosyalarını Google Fonts ve Tailwind CSS (CDN) üzerinden yükler; bu sağlayıcılar dosyaları sunabilmek için IP adresiniz gibi teknik bilgileri görür. Bize e-posta gönderirseniz, adresinizi ve mesajınızı yalnızca size yanıt vermek için kullanırız.</p>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">5. Üçüncü Taraf Hizmetleri</h2>
-                    <p>Uygulamalarımız üçüncü taraf hizmetleri (analitik, bulut depolama, kimlik doğrulama vb.) kullanabilir. Bu hizmetlerin kendi gizlilik politikaları vardır. İncelemenizi öneririz. Kişisel bilgilerinizi üçüncü taraflara satmıyoruz.</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">6. Çocuklar</h2>
+                    <p>Çocuklara yönelik uygulamalarımızın (şu an Miluw Kids) <strong class="text-slate-100">her birinin kendi gizlilik politikası</strong> vardır ve o uygulama için yalnızca o metin geçerlidir. Bu uygulamalar çocuklardan sunucularımıza kişisel bilgi toplamaz; uygulama dışına açılan bağlantılar ebeveyn onayının arkasındadır.</p>
+                    <p class="mt-2">Diğer uygulamalarımız çocuklara yönelik değildir; varsa yaş sınırı her uygulamanın kendi politikasında belirtilir. Bir çocuğa ait bilgiyi işlediğimizi düşünüyorsanız bize yazın, hemen sileriz.</p>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">6. Haklarınız</h2>
-                    <p>Bulunduğunuz yere göre aşağıdaki haklara sahip olabilirsiniz:</p>
-                    <ul class="list-disc pl-6 space-y-1 mt-2">
-                        <li>Verilerinize erişmek veya bir kopyasını almak</li>
-                        <li>Verilerinizi düzeltmek veya güncellemek</li>
-                        <li>Verilerinizin silinmesini talep etmek</li>
-                        <li>Belirli işlemlere itiraz etmek veya kısıtlamak</li>
-                        <li>Veri taşınabilirliği</li>
+                    <h2 class="text-xl font-semibold text-white mb-3">7. Haklarınız (KVKK m.11)</h2>
+                    <p>Kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, aktarıldığı tarafları öğrenme, itiraz etme ve zararın giderilmesini talep etme haklarınız vardır. Bulunduğunuz ülkenin hukuku size ek haklar tanıyabilir. Talepleriniz için <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a> adresine yazabilirsiniz; en geç 30 gün içinde yanıtlarız.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">8. Değişiklikler</h2>
+                    <p>Bu metni güncelleyebiliriz. Güncel sürüm her zaman bu sayfada yayımlanır. Bir uygulamanın verilerinizi işleme biçimini değiştiren güncellemeler, o uygulamanın politikasında duyurulur ve gerektiğinde izniniz yeniden istenir.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">9. İletişim</h2>
+                    <p><a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a><br>CygnusLabs · İstanbul, Türkiye</p>
+                </section>
+            </div>
+            </div>
+
+            <!-- ENGLISH — Türkçe metnin çevirisidir. KVKK açısından esas metin Türkçedir. -->
+            <div id="content-en" lang="en" class="hidden">
+            <div class="mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Privacy Policy</h1>
+                <p class="text-slate-400 text-sm">CygnusLabs website and apps · Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 2 · Effective: 20 October 2026</p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-700 bg-surface-dark p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-white mb-2">In short</p>
+                <ul class="list-disc pl-6 space-y-1 text-slate-300">
+                    <li>Our apps keep your data <strong class="text-slate-100">on your device</strong> wherever possible.</li>
+                    <li>We <strong class="text-slate-100">never sell</strong> your data; our apps contain no advertising, analytics or tracking.</li>
+                    <li>If an app has its own privacy policy, <strong class="text-slate-100">that app's policy applies</strong>. Each of our apps for children has its own policy.</li>
+                    <li>Our website uses no cookies or analytics.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-10 text-slate-300 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">1. Scope and data controller</h2>
+                    <p>This policy sets out the general principles for the cygnuslabs.ai website and the mobile apps developed by Çağan Bıçakçı under the name CygnusLabs. Under the Turkish Personal Data Protection Law No. 6698 ("KVKK"), the data controller is Çağan Bıçakçı.</p>
+                    <p class="mt-2">If an app has its own privacy policy, <strong class="text-slate-100">that policy takes precedence</strong> for the app; this page only applies to matters it doesn't cover.</p>
+                    <p class="mt-2">Contact: <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a></p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">2. Our apps and their privacy policies</h2>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-slate-400">
+                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">App</th><th class="py-2 pr-4 font-medium">Who it's for</th><th class="py-2 font-medium">Privacy policy</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Miluw Kids</td><td class="py-2 pr-4">Preschool children (set up by a parent)</td><td class="py-2"><a href="miluw-kids/privacy/?lang=en" class="text-primary hover:text-secondary transition-colors">Miluw Kids Privacy Policy</a></td></tr>
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Pery</td><td class="py-2 pr-4">Adults (18+ for an account)</td><td class="py-2"><a href="pery/privacy/?lang=en" class="text-primary hover:text-secondary transition-colors">Pery Privacy Policy</a></td></tr>
+                                <tr><td class="py-2 pr-4">Budget Flux</td><td class="py-2 pr-4">Adults</td><td class="py-2">This page (<a href="#budget-flux-en" class="text-primary hover:text-secondary transition-colors">section 4</a>)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">3. Principles for all our apps</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong class="text-slate-100">Device first:</strong> What you enter in our apps is stored only on your device by default. If a feature sends your data to a server (for example an optional account), that app's policy explains it clearly and asks for your consent where required.</li>
+                        <li><strong class="text-slate-100">No selling, no ads:</strong> We never sell your data or share it with anyone for marketing. Our apps contain no advertising, analytics or cross-app tracking tools.</li>
+                        <li><strong class="text-slate-100">Necessary connections:</strong> Some apps connect to the internet to fetch content or up-to-date information (e.g. exchange rates). The providers they connect to see technical information such as your device's IP address so that the connection can be made; these providers are listed in each app's section or policy.</li>
+                        <li><strong class="text-slate-100">App stores:</strong> Our apps are downloaded and updated through the Apple App Store; Apple's own <a href="https://www.apple.com/legal/privacy/" class="text-primary hover:text-secondary transition-colors" rel="noopener" target="_blank">privacy policy</a> applies to those processes.</li>
                     </ul>
-                    <p class="mt-3">Bu hakları kullanmak için aşağıdaki e-posta adresiyle iletişime geçin.</p>
                 </section>
+
+                <section id="budget-flux-en">
+                    <h2 class="text-xl font-semibold text-white mb-3">4. Budget Flux</h2>
+                    <p>Budget Flux has no accounts. The income and expenses, categories, budgets, scheduled payments, investments and settings you enter are stored <strong class="text-slate-100">only on your device</strong>; we cannot see them.</p>
+                    <p class="mt-3">To show up-to-date rates and prices, the app connects to the services below. These requests only contain the currency or asset code being looked up (e.g. a stock or fund code); no amounts, transactions or anything about your identity are sent.</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-slate-400">
+                                <tr class="border-b border-slate-700"><th class="py-2 pr-4 font-medium">Service</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 font-medium">What is sent</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Currency API (jsDelivr / Cloudflare Pages)</td><td class="py-2 pr-4">Exchange rates</td><td class="py-2">Currency code; technical information (IP address)</td></tr>
+                                <tr class="border-b border-slate-800"><td class="py-2 pr-4">Yahoo Finance, TradingView</td><td class="py-2 pr-4">Stock, gold and other market prices</td><td class="py-2">Asset code; technical information (IP address)</td></tr>
+                                <tr><td class="py-2 pr-4">TEFAS (through a CygnusLabs proxy on Cloudflare)</td><td class="py-2 pr-4">Investment fund prices</td><td class="py-2">Fund code; technical information (IP address)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-1 mt-3">
+                        <li><strong class="text-slate-100">Notifications:</strong> Reminders are scheduled on your device; no server is involved.</li>
+                        <li><strong class="text-slate-100">Backups:</strong> A backup is a file you create and save wherever you choose (e.g. Files, iCloud Drive); it is never sent to us.</li>
+                        <li><strong class="text-slate-100">Deletion:</strong> Deleting the app removes all of its data from the device.</li>
+                    </ul>
+                </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">7. Çocuklar</h2>
-                    <p>Uygulamalarımız 13 yaş altındaki (veya yasanın gerektirdiği daha yüksek yaştaki) çocuklara yönelik değildir. Çocuklardan bilerek kişisel bilgi toplamıyoruz. Bu tür bilgi topladığımızı düşünüyorsanız, silmemiz için lütfen bizimle iletişime geçin.</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">5. Website</h2>
+                    <p>cygnuslabs.ai uses no cookies, analytics or forms and collects no personal information from visitors. Pages load fonts and styles from Google Fonts and Tailwind CSS (CDN); these providers see technical information such as your IP address in order to serve the files. If you email us, we use your address and message only to reply to you.</p>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">8. Bu Politikanın Değişiklikleri</h2>
-                    <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Güncel sürümü bu sayfada yayınlayacağız; önemli değişikliklerde uygulama veya e-posta ile bildirebiliriz. Değişikliklerden sonra uygulamalarımızı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">6. Children</h2>
+                    <p><strong class="text-slate-100">Each of our apps for children</strong> (currently Miluw Kids) has its own privacy policy, and only that policy applies to the app. These apps collect no personal information from children on our servers, and links out of the app are behind a parental gate.</p>
+                    <p class="mt-2">Our other apps are not directed at children; any age limit is stated in each app's own policy. If you believe we have processed information about a child, write to us and we will delete it right away.</p>
                 </section>
+
                 <section>
-                    <h2 class="text-xl font-semibold text-white mb-3">9. Bize Ulaşın</h2>
-                    <p>Bu Gizlilik Politikası veya verileriniz hakkında sorularınız için:</p>
-                    <p class="mt-2">
-                        <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a>
-                    </p>
-                    <p class="mt-2 text-slate-400 text-sm">CygnusLabs · İstanbul, Türkiye</p>
+                    <h2 class="text-xl font-semibold text-white mb-3">7. Your rights (KVKK Article 11)</h2>
+                    <p>You have the right to learn whether your personal data is processed, request information, ask for it to be corrected or deleted, learn who it was transferred to, object, and claim compensation for damages. The law of your country may give you additional rights. Write to <a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a> with any request; we respond within 30 days at the latest.</p>
                 </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">8. Changes</h2>
+                    <p>We may update this policy. The current version is always published on this page. Updates that change how an app processes your data are announced in that app's policy, and your consent is asked again where required.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-white mb-3">9. Contact</h2>
+                    <p><a href="mailto:hello@cygnuslabs.ai" class="text-primary hover:text-secondary transition-colors">hello@cygnuslabs.ai</a><br>CygnusLabs · Istanbul, Turkey</p>
+                </section>
+
+                <p class="text-sm text-slate-400">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
+            </div>
             </div>
         </div>
     </main>
 
     <div id="footer"></div>
 
-    <!-- Load only header and footer on this page -->
+    <!-- Yalnız header ve footer. -->
     <script src="scripts/component-loader.js"></script>
     <script>
         (function() {
-            function loadPrivacyPageComponents() {
+            function loadPageComponents() {
                 Promise.all([
                     loadComponent('header', 'header'),
                     loadComponent('footer', 'footer')
                 ]).then(function() {
                     document.dispatchEvent(new CustomEvent('componentsLoaded'));
-                    // Update header link: Contact should go to index#contact
                     var contactLink = document.querySelector('nav a[href="#contact"]');
                     if (contactLink) contactLink.setAttribute('href', 'index.html#contact');
                 }).catch(function(err) {
@@ -215,37 +293,31 @@
                 });
             }
             if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', loadPrivacyPageComponents);
+                document.addEventListener('DOMContentLoaded', loadPageComponents);
             } else {
-                loadPrivacyPageComponents();
+                loadPageComponents();
             }
 
-            function setPrivacyLanguage(lang) {
-                var contentEn = document.getElementById('content-en');
-                var contentTr = document.getElementById('content-tr');
-                var btnEn = document.getElementById('lang-en');
-                var btnTr = document.getElementById('lang-tr');
-                var backText = document.getElementById('back-text');
-                if (backText) backText.textContent = lang === 'tr' ? 'Ana Sayfaya Dön' : 'Back to Home';
-                if (lang === 'tr') {
-                    contentEn.classList.add('hidden');
-                    contentTr.classList.remove('hidden');
-                    btnEn.setAttribute('aria-pressed', 'false');
-                    btnEn.className = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600';
-                    btnTr.setAttribute('aria-pressed', 'true');
-                    btnTr.className = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white';
-                } else {
-                    contentTr.classList.add('hidden');
-                    contentEn.classList.remove('hidden');
-                    btnTr.setAttribute('aria-pressed', 'false');
-                    btnTr.className = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600';
-                    btnEn.setAttribute('aria-pressed', 'true');
-                    btnEn.className = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white';
-                }
+            // Dil: ?lang=en|tr önceliklidir; yoksa cihaz dili (Türkçe değilse İngilizce).
+            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-primary text-white';
+            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors bg-slate-700 text-slate-300 hover:bg-slate-600';
+            function setLanguage(lang) {
+                var tr = lang === 'tr';
+                document.getElementById('content-tr').classList.toggle('hidden', !tr);
+                document.getElementById('content-en').classList.toggle('hidden', tr);
+                document.getElementById('lang-tr').className = tr ? ACTIVE : IDLE;
+                document.getElementById('lang-en').className = tr ? IDLE : ACTIVE;
+                document.getElementById('lang-tr').setAttribute('aria-pressed', String(tr));
+                document.getElementById('lang-en').setAttribute('aria-pressed', String(!tr));
+                document.getElementById('back-text').textContent = tr ? 'Ana Sayfaya Dön' : 'Back to Home';
+                document.documentElement.lang = lang;
+                document.title = tr ? 'Gizlilik Politikası | CygnusLabs' : 'Privacy Policy | CygnusLabs';
             }
-
-            document.getElementById('lang-en').addEventListener('click', function() { setPrivacyLanguage('en'); });
-            document.getElementById('lang-tr').addEventListener('click', function() { setPrivacyLanguage('tr'); });
+            var param = new URLSearchParams(location.search).get('lang');
+            var device = (navigator.language || 'tr').toLowerCase();
+            setLanguage(param === 'en' || param === 'tr' ? param : device.indexOf('tr') === 0 ? 'tr' : 'en');
+            document.getElementById('lang-tr').addEventListener('click', function() { setLanguage('tr'); });
+            document.getElementById('lang-en').addEventListener('click', function() { setLanguage('en'); });
         })();
     </script>
     <script src="scripts/main.js"></script>

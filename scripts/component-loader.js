@@ -44,6 +44,7 @@ async function loadAllComponents() {
         await Promise.all([
             loadComponent('header', 'header'),
             loadComponent('hero', 'hero'),
+            loadComponent('apps', 'apps'),
             loadComponent('footer', 'footer')
         ]);
         
