@@ -1,8 +1,8 @@
 /*
  * Theme colors (RGB channels, used by Tailwind through scripts/theme.js).
- * Off-white and near-black instead of pure white/black, which are harsh to read;
- * #121212 is Material Design's recommended dark background. The accent is desaturated
- * in dark mode so it doesn't glow.
+ * Off-white and near-black instead of pure white/black, which are harsh to read.
+ * The dark background is a soft charcoal, a little lighter than Material's #121212.
+ * The accent is desaturated in dark mode so it doesn't glow.
  */
 :root {
     --bg: 240 239 235;        /* #F0EFEB */
@@ -16,13 +16,13 @@
 }
 
 .dark {
-    --bg: 18 18 18;           /* #121212 */
-    --surface: 28 28 28;      /* #1C1C1C */
+    --bg: 27 27 29;           /* #1B1B1D */
+    --surface: 38 38 40;      /* #262628 */
     --fg: 232 230 227;        /* #E8E6E3 */
-    --muted: 160 158 153;     /* #A09E99 */
-    --line: 44 44 43;         /* #2C2C2B */
+    --muted: 166 164 159;     /* #A6A49F */
+    --line: 54 54 56;         /* #363638 */
     --accent: 127 168 217;    /* #7FA8D9 */
-    --accent-fg: 18 18 18;
+    --accent-fg: 27 27 29;
     color-scheme: dark;
 }
 
