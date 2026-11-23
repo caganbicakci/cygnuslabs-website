@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--
+  Budget Flux — Gizlilik Politikası ve KVKK Aydınlatma Metni.  →  https://cygnuslabs.ai/budget-flux/privacy/
+
+  ANA KOPYA BU DOSYADIR. App Store Connect'teki gizlilik politikası adresi buraya verilir.
+  Metin, uygulamanın 1.2.1 sürümündeki veri işleyişini anlatır (BudgetFlux reposu):
+    * Hesap yok. Tüm veriler cihazda: expo-sqlite (işlemler, tekrarlı işlemler, kategoriler, yatırımlar,
+      takip edilen semboller, bildirim geçmişi, ayarlar) + AsyncStorage (son kur/fiyat önbelleği).
+    * Ağ (src/utils/exchangeRate.js, src/utils/yahooFinance.js): currency-api (jsDelivr, yedek olarak
+      Cloudflare Pages), Yahoo Finance, TradingView scanner, TEFAS ara sunucusu (tefas-worker/, Cloudflare
+      Workers; istek kaydı tutmaz, yanıtı 15 dk önbellekler). Giden: arama metni ve sembol/fon kodları.
+    * Bildirimler yerel (expo-notifications, push jetonu yok). Yedek: SQLite dosyasının şifresiz kopyası,
+      paylaşım sayfasıyla kullanıcının seçtiği yere kaydedilir.
+    * Reklam, analitik, çökme raporlama SDK'sı, ATT/IDFA yok.
+  Uygulamaya veri gönderen yeni bir özellik eklenirse (hesap, senkron, analitik, uzaktan bildirim...)
+  bu metin ve App Store'daki gizlilik etiketi birlikte güncellenmeli.
+
+  `<base href="/">`: sayfa alt klasörde; component-loader `./components/...` gibi göreli yollar
+  kullandığı için taban köke çekilmezse header/footer ve stiller yüklenmez.
+
+  TASLAK — HUKUKİ İNCELEME BEKLİYOR. Yayından önce bir hukukçuya okutulmalı, özellikle:
+    * Veri sorumlusunun adres bilgisi gerekli mi (şu an yalnız e-posta var).
+    * Cihazın doğrudan bağlandığı yurt dışı sağlayıcılar için KVKK m.9 açısından ek bir bildirim gerekip gerekmediği.
+-->
+<html class="scroll-smooth" lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <base href="/">
+    <title>Budget Flux Gizlilik Politikası | CygnusLabs</title>
+    <meta name="description" content="Budget Flux gelir, gider ve yatırım takip uygulamasının gizlilik politikası ve KVKK aydınlatma metni.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Theme: Tailwind colors + light/dark mode (shared by every page) -->
+    <script src="scripts/theme.js?v=3"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css?v=3">
+</head>
+<body class="bg-bg text-fg">
+
+    <div id="header"></div>
+
+    <main class="pt-24 sm:pt-28 pb-16 sm:pb-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-muted hover:text-fg transition-colors text-sm mb-8">
+                <span class="material-symbols-outlined text-lg">arrow_back</span>
+                <span id="back-text">Ana Sayfaya Dön</span>
+            </a>
+
+            <div class="flex justify-end gap-2 mb-6" role="group" aria-label="Dil / Language">
+                <button type="button" id="lang-tr" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors">Türkçe</button>
+                <button type="button" id="lang-en" class="px-4 py-2 rounded-lg text-sm font-medium transition-colors">English</button>
+            </div>
+
+            <div id="content-tr" lang="tr">
+            <div class="mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Budget Flux Gizlilik Politikası</h1>
+                <p class="text-muted text-sm">KVKK Aydınlatma Metni · Sürüm 1 · Yürürlük: 24 Kasım 2026</p>
+            </div>
+
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">Kısaca</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>Hesap yok. Girdiğin her şey <strong class="text-fg">yalnızca cihazında</strong> saklanır; biz bu bilgileri göremeyiz.</li>
+                    <li>Uygulama internete yalnızca güncel kurları ve piyasa fiyatlarını almak için bağlanır. Bu isteklerde tutarların, işlemlerin ve portföyün <strong class="text-fg">gönderilmez</strong>.</li>
+                    <li>Reklam, analitik ve takip yok. Verilerini <strong class="text-fg">satmayız</strong>.</li>
+                    <li>Bildirimler cihazında planlanır; yedekler senin kaydettiğin dosyalardır ve bize gelmez.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-10 text-fg/80 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Veri sorumlusu</h2>
+                    <p>Budget Flux, Çağan Bıçakçı tarafından CygnusLabs adıyla geliştirilen bir uygulamadır. 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu Çağan Bıçakçı'dır.</p>
+                    <p class="mt-2">İletişim: <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a></p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. Cihazında saklanan bilgiler</h2>
+                    <p>Budget Flux'ı kullanmak için hesap açman, e-posta ya da telefon numarası vermen gerekmez. Uygulamaya girdiğin bilgiler cihazındaki uygulama veritabanında tutulur ve hiçbir sunucuya gönderilmez:</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Bilgi</th><th class="py-2 font-medium">Örnek</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-line"><td class="py-2 pr-4">İşlemler</td><td class="py-2">Gelir ve giderlerin: tutar, kategori, tarih, açıklama, bekleyen olup olmadığı</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Tekrarlı işlemler</td><td class="py-2">Kira, maaş, abonelik ve taksitler: tutar, sıklık, başlangıç ve bitiş</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Kategoriler</td><td class="py-2">Hazır kategoriler ve kendi oluşturduğun kategorilerin adı ve simgesi</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Yatırımlar</td><td class="py-2">Hisse, fon, altın, gümüş ve döviz alış-satışların: sembol, miktar, fiyat, tarih</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Piyasa listesi</td><td class="py-2">Takip ettiğin semboller</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Bildirim geçmişi</td><td class="py-2">Uygulamanın sana gösterdiği hatırlatmalar</td></tr>
+                                <tr><td class="py-2 pr-4">Ayarlar ve önbellek</td><td class="py-2">Para birimi, dil, tema, bakiye gizleme tercihi; internet yokken gösterilmek üzere son alınan kurlar ve fiyatlar</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-3">Bu bilgilere biz erişemeyiz. Cihazının iCloud ya da bilgisayar yedeklemesi açıksa, uygulama verileri de diğer uygulamalarınki gibi Apple'ın sistemiyle bu yedeklere dahil olabilir; bu yedekler Apple'ın <a href="https://www.apple.com/legal/privacy/" class="text-accent hover:underline" rel="noopener" target="_blank">gizlilik politikasına</a> tabidir ve bize ulaşmaz.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. İnternet bağlantıları</h2>
+                    <p>Uygulama, kurları, fiyatları ve grafikleri gösterebilmek ve sembol aramalarını yanıtlayabilmek için aşağıdaki hizmetlere doğrudan cihazından bağlanır:</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Hizmet</th><th class="py-2 pr-4 font-medium">Ne için</th><th class="py-2 font-medium">Gönderilen</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Currency API (jsDelivr, yedek olarak Cloudflare Pages)</td><td class="py-2 pr-4">Döviz kurları, altın ve gümüş fiyatları</td><td class="py-2">Yalnızca herkese açık kur dosyasının isteği</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Yahoo Finance</td><td class="py-2 pr-4">Hisse arama, fiyatlar ve grafikler</td><td class="py-2">Arama metnin, sembol kodları</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">TradingView</td><td class="py-2 pr-4">Borsa İstanbul hisseleri için arama ve fiyatlar</td><td class="py-2">Arama metnin, sembol kodları</td></tr>
+                                <tr><td class="py-2 pr-4">TEFAS ara sunucusu (CygnusLabs, Cloudflare Workers üzerinde)</td><td class="py-2 pr-4">Yatırım fonu arama ve fiyatları</td><td class="py-2">Arama metnin, fon kodları</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 mt-3">
+                        <li>Bu isteklerde <strong class="text-fg">tutarların, işlemlerin, lot sayıların, portföy değerin ya da seni tanımlayan bir bilgi gönderilmez</strong>. Uygulama reklam kimliği ya da cihaz kimliği göndermez.</li>
+                        <li>Bağlantı kurulabilmesi için bu sağlayıcılar, her internet bağlantısında olduğu gibi IP adresini ve isteğin zamanı gibi teknik bilgileri görür ve kendi politikalarına göre işler. Sağlayıcıların bir kısmı ABD dahil yurt dışında hizmet verir.</li>
+                        <li>TEFAS ara sunucusu bizimdir: istekleri kaydetmez, yalnızca fon fiyatı yanıtlarını en fazla 15 dakika önbellekte tutar.</li>
+                        <li>Ayarlar → Hakkında'daki web sitesi ve sosyal medya bağlantılarına dokunursan sayfa tarayıcında açılır; o sitelerin kendi politikaları geçerlidir.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Bildirimler</h2>
+                    <p>Tekrarlı ve bekleyen işlemler için hatırlatmalar iOS'un yerel bildirim özelliğiyle <strong class="text-fg">cihazında planlanır</strong>. Bunun için sunucu kullanılmaz ve bildirim jetonu alınmaz. Bildirim izni isteğe bağlıdır; iPhone Ayarlar'ından istediğin an kapatabilirsin.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Yedekleme ve geri yükleme</h2>
+                    <p>Ayarlar → Veri Yedekleme'den verilerini bir dosya olarak dışa aktarabilirsin. Dosyayı nereye kaydedeceğini ya da kime göndereceğini (Dosyalar, iCloud Drive, AirDrop, e-posta vb.) sen seçersin; dosya bize gönderilmez. Yedek dosyası <strong class="text-fg">şifreli değildir</strong> ve tüm finansal kayıtlarını içerir, bu yüzden güvendiğin bir yerde sakla. Geri yükleme yalnızca senin seçtiğin dosyayı okur.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. Reklam, analitik ve takip</h2>
+                    <p>Uygulamada reklam, analitik, çökme raporlama ya da uygulamalar arası takip yapan hiçbir araç yoktur. Verilerini satmayız ve kimseyle paylaşmayız.</p>
+                    <p class="mt-2">iPhone'unda "Uygulama geliştiricileriyle paylaş" seçeneğini açtıysan, Apple bize kimliğini içermeyen çökme raporları ve toplu kullanım istatistikleri sunabilir. Bu Apple'ın sistemidir ve iPhone Ayarlar → Gizlilik ve Güvenlik → Analiz ve İyileştirmeler'den kapatılabilir.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Hukuki sebep</h2>
+                    <p>Cihazında tuttuğun bilgilere erişimimiz olmadığından bunları işlemeyiz. TEFAS ara sunucumuza bağlanırken görünen IP adresi gibi teknik bilgiler, istediğin fon bilgisini sana ulaştırabilmek için gereklidir (KVKK m.5/2-c, hizmetin ifası) ve kaydedilmez.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Saklama ve silme</h2>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Bilgilerin, sen silene kadar cihazında kalır. Kayıtları uygulama içinden tek tek silebilirsin.</li>
+                        <li>Uygulamayı sildiğinde tüm veriler cihazından silinir.</li>
+                        <li>Oluşturduğun yedek dosyalarını ve cihaz yedeklerini (iCloud, bilgisayar) kendin silmen gerekir.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Hakların (KVKK m.11)</h2>
+                    <p>Verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini ya da silinmesini isteme, aktarıldığı tarafları öğrenme, itiraz etme ve zararın giderilmesini talep etme hakların vardır. Budget Flux hakkında sunucularımızda seninle ilgili bir kayıt tutulmaz; yine de her türlü soru ve talebin için <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a> adresine yazabilirsin. Talebini en geç 30 gün içinde yanıtlarız.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">10. Çocuklar</h2>
+                    <p>Budget Flux çocuklara yönelik değildir ve hiçbir kullanıcıdan kişisel bilgi toplamaz.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">11. Değişiklikler</h2>
+                    <p>Bu metni güncelleyebiliriz; güncel sürüm her zaman bu sayfadadır. Uygulamaya verilerini cihaz dışına gönderen bir özellik (ör. hesap ya da senkron) eklenirse, bu sayfayı o sürüm yayımlanmadan önce güncelleriz ve özellik isteğe bağlı olur.</p>
+                </section>
+            </div>
+            </div>
+
+            <!-- ENGLISH — Türkçe metnin çevirisidir. KVKK açısından esas metin Türkçedir. -->
+            <div id="content-en" lang="en" class="hidden">
+            <div class="mb-8">
+                <h1 class="text-3xl sm:text-4xl font-bold text-fg mb-2">Budget Flux Privacy Policy</h1>
+                <p class="text-muted text-sm">Privacy Notice under the Turkish Personal Data Protection Law (KVKK) · Version 1 · Effective: 24 November 2026</p>
+            </div>
+
+            <div class="rounded-2xl border border-line bg-surface p-5 sm:p-6 mb-10">
+                <p class="font-semibold text-fg mb-2">In short</p>
+                <ul class="list-disc pl-6 space-y-1 text-fg/80">
+                    <li>No accounts. Everything you enter is stored <strong class="text-fg">only on your device</strong>; we cannot see it.</li>
+                    <li>The app connects to the internet only to fetch current exchange rates and market prices. Your amounts, transactions and portfolio are <strong class="text-fg">never sent</strong>.</li>
+                    <li>No advertising, analytics or tracking. We <strong class="text-fg">never sell</strong> your data.</li>
+                    <li>Reminders are scheduled on your device; backups are files you save yourself and never reach us.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-10 text-fg/80 leading-relaxed">
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">1. Data controller</h2>
+                    <p>Budget Flux is an app developed by Çağan Bıçakçı under the name CygnusLabs. Under the Turkish Personal Data Protection Law No. 6698 ("KVKK"), the data controller is Çağan Bıçakçı.</p>
+                    <p class="mt-2">Contact: <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a></p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">2. Information stored on your device</h2>
+                    <p>You don't need an account, email address or phone number to use Budget Flux. What you enter is kept in the app's database on your device and is never sent to any server:</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Information</th><th class="py-2 font-medium">Examples</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Transactions</td><td class="py-2">Your income and expenses: amount, category, date, note, whether it is pending</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Recurring transactions</td><td class="py-2">Rent, salary, subscriptions and instalments: amount, frequency, start and end</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Categories</td><td class="py-2">Built-in categories and the names and icons of the ones you create</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Investments</td><td class="py-2">Your purchases and sales of stocks, funds, gold, silver and currencies: symbol, quantity, price, date</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Market list</td><td class="py-2">The symbols you follow</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Notification history</td><td class="py-2">Reminders the app has shown you</td></tr>
+                                <tr><td class="py-2 pr-4">Settings and cache</td><td class="py-2">Currency, language, theme, hide-balance preference; the latest rates and prices, so they can be shown offline</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-3">We have no access to this information. If iCloud or computer backups are turned on for your device, the app's data may be included in those backups by Apple's system, like any other app's; such backups are subject to Apple's <a href="https://www.apple.com/legal/privacy/" class="text-accent hover:underline" rel="noopener" target="_blank">privacy policy</a> and never reach us.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">3. Internet connections</h2>
+                    <p>To show rates, prices and charts and to answer symbol searches, the app connects directly from your device to the following services:</p>
+                    <div class="overflow-x-auto mt-3">
+                        <table class="w-full text-sm text-left border-collapse">
+                            <thead class="text-muted">
+                                <tr class="border-b border-line"><th class="py-2 pr-4 font-medium">Service</th><th class="py-2 pr-4 font-medium">Purpose</th><th class="py-2 font-medium">What is sent</th></tr>
+                            </thead>
+                            <tbody class="align-top">
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Currency API (jsDelivr, with Cloudflare Pages as a fallback)</td><td class="py-2 pr-4">Exchange rates, gold and silver prices</td><td class="py-2">Only a request for the public rates file</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">Yahoo Finance</td><td class="py-2 pr-4">Stock search, prices and charts</td><td class="py-2">Your search text, symbol codes</td></tr>
+                                <tr class="border-b border-line"><td class="py-2 pr-4">TradingView</td><td class="py-2 pr-4">Search and prices for Borsa Istanbul stocks</td><td class="py-2">Your search text, symbol codes</td></tr>
+                                <tr><td class="py-2 pr-4">TEFAS proxy (run by CygnusLabs on Cloudflare Workers)</td><td class="py-2 pr-4">Turkish investment fund search and prices</td><td class="py-2">Your search text, fund codes</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-6 space-y-2 mt-3">
+                        <li>These requests <strong class="text-fg">never include your amounts, transactions, quantities, portfolio value or anything that identifies you</strong>. The app sends no advertising or device identifier.</li>
+                        <li>As with any internet connection, these providers see your IP address and technical details such as the time of the request so that the connection can be made, and handle them under their own policies. Some of them operate outside Turkey, including in the USA.</li>
+                        <li>The TEFAS proxy is ours: it does not log requests and only caches fund price responses for up to 15 minutes.</li>
+                        <li>If you tap the website or social media links under Settings → About, the page opens in your browser and that site's own policy applies.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">4. Notifications</h2>
+                    <p>Reminders for recurring and pending transactions are <strong class="text-fg">scheduled on your device</strong> using iOS local notifications. No server is involved and no push token is created. Notification permission is optional, and you can turn it off at any time in your iPhone's Settings.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">5. Backup and restore</h2>
+                    <p>Under Settings → Data Backup you can export your data as a file. You choose where to save it or who to send it to (Files, iCloud Drive, AirDrop, email and so on); the file is never sent to us. The backup file is <strong class="text-fg">not encrypted</strong> and contains all your financial records, so keep it somewhere you trust. Restoring only reads the file you pick.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">6. Advertising, analytics and tracking</h2>
+                    <p>The app contains no advertising, analytics, crash reporting or cross-app tracking tools. We do not sell your data or share it with anyone.</p>
+                    <p class="mt-2">If you have turned on "Share With App Developers" on your iPhone, Apple may provide us with crash reports and aggregated usage statistics that do not identify you. This is Apple's system and can be turned off under iPhone Settings → Privacy &amp; Security → Analytics &amp; Improvements.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">7. Legal basis</h2>
+                    <p>We have no access to the information on your device, so we do not process it. Technical details such as the IP address visible when the app connects to our TEFAS proxy are needed to deliver the fund information you asked for (KVKK Article 5(2)(c), performance of the service) and are not logged.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">8. Retention and deletion</h2>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li>Your information stays on your device until you delete it. You can delete records one by one in the app.</li>
+                        <li>When you delete the app, all its data is removed from your device.</li>
+                        <li>Backup files you created and device backups (iCloud, computer) need to be deleted by you.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">9. Your rights (KVKK Article 11)</h2>
+                    <p>You have the right to learn whether your data is processed, request information, ask for it to be corrected or deleted, learn who it was transferred to, object, and claim compensation for damages. We keep no records about you on our servers for Budget Flux; for any question or request, write to <a href="mailto:hello@cygnuslabs.ai" class="text-accent hover:underline">hello@cygnuslabs.ai</a>. We respond within 30 days at the latest.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">10. Children</h2>
+                    <p>Budget Flux is not directed at children and does not collect personal information from any user.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-xl font-semibold text-fg mb-3">11. Changes</h2>
+                    <p>We may update this policy; the current version is always on this page. If we add a feature that sends your data off your device (such as an account or sync), we will update this page before that version is released, and the feature will be optional.</p>
+                </section>
+
+                <p class="text-sm text-muted">This English version is a translation provided for convenience. In case of any discrepancy, the Turkish version prevails.</p>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Yalnız header ve footer (privacy.html ile aynı yükleme). -->
+    <script src="scripts/component-loader.js"></script>
+    <script>
+        (function() {
+            function loadPageComponents() {
+                Promise.all([
+                    loadComponent('header', 'header'),
+                    loadComponent('footer', 'footer')
+                ]).then(function() {
+                    document.dispatchEvent(new CustomEvent('componentsLoaded'));
+                    var contactLink = document.querySelector('nav a[href="#contact"]');
+                    if (contactLink) contactLink.setAttribute('href', 'index.html#contact');
+                }).catch(function(err) {
+                    console.error('Error loading components:', err);
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', loadPageComponents);
+            } else {
+                loadPageComponents();
+            }
+
+            // Dil: ?lang=en|tr önceliklidir; yoksa cihaz dili (Türkçe değilse İngilizce).
+            var ACTIVE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-fg bg-fg text-bg';
+            var IDLE = 'px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-line text-muted hover:text-fg';
+            function setLanguage(lang) {
+                var tr = lang === 'tr';
+                document.getElementById('content-tr').classList.toggle('hidden', !tr);
+                document.getElementById('content-en').classList.toggle('hidden', tr);
+                document.getElementById('lang-tr').className = tr ? ACTIVE : IDLE;
+                document.getElementById('lang-en').className = tr ? IDLE : ACTIVE;
+                document.getElementById('lang-tr').setAttribute('aria-pressed', String(tr));
+                document.getElementById('lang-en').setAttribute('aria-pressed', String(!tr));
+                document.getElementById('back-text').textContent = tr ? 'Ana Sayfaya Dön' : 'Back to Home';
+                document.documentElement.lang = lang;
+                document.title = tr ? 'Budget Flux Gizlilik Politikası | CygnusLabs' : 'Budget Flux Privacy Policy | CygnusLabs';
+            }
+            var param = new URLSearchParams(location.search).get('lang');
+            var device = (navigator.language || 'tr').toLowerCase();
+            setLanguage(param === 'en' || param === 'tr' ? param : device.indexOf('tr') === 0 ? 'tr' : 'en');
+            document.getElementById('lang-tr').addEventListener('click', function() { setLanguage('tr'); });
+            document.getElementById('lang-en').addEventListener('click', function() { setLanguage('en'); });
+        })();
+    </script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
